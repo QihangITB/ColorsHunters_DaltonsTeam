@@ -1436,7 +1436,7 @@ GameObject:
   - component: {fileID: 767223097}
   - component: {fileID: 767223096}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Continuar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1505,7 +1505,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 767223097}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820588849}
+        m_TargetAssemblyTypeName: CambiadorEscenas, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &767223097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,6 +1620,7 @@ GameObject:
   - component: {fileID: 820588847}
   - component: {fileID: 820588846}
   - component: {fileID: 820588845}
+  - component: {fileID: 820588849}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1708,6 +1721,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &820588849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820588844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5125c7afe418a8f468c0f003f28c82de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &919835134
 GameObject:
   m_ObjectHideFlags: 0
