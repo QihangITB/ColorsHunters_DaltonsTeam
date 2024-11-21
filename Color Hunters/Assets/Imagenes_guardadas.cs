@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,15 +25,25 @@ public class Imagenes_guardadas : MonoBehaviour
         imagene_1 = new Sprite[9] { imagen_1_1, imagen_1_2, imagen_1_3, imagen_1_4, imagen_1_5 , imagen_1_6 , imagen_1_7 , imagen_1_8 , imagen_1_9 };
         imagene_2 = new Sprite[9] { imagen_1_1, imagen_1_2, imagen_1_3, imagen_1_4, imagen_1_5, imagen_1_6, imagen_1_7, imagen_1_8, imagen_1_9 };
 
-        Image image = Captura.GetComponentInChildren<Image>(true);
+        Image image = Captura.GetComponent<Image>();
 
-        //Sprite foografia = imagene_ + (GameManager.gameManager.getImagen)[GameManager.gameManager.getImagen_imagen_guadricula];
-
+        int numeroArray = GameManager.gameManager.getImagen();
+        Debug.Log(numeroArray); 
+        int numeroPosicion = GameManager.gameManager.getImagen_imagen_guadricula();
+        Debug.Log(numeroPosicion);
         if (Captura != null)
         {
             if (image != null)
             {
-                //image.sprite = imagen;
+                switch (numeroArray)
+                {
+                    case 0:
+                        Debug.Log("se ha impreso la foto");
+                        image.sprite = imagene_1[numeroPosicion];
+                        break;
+                    
+
+                }
             }
             else
             {

@@ -34,8 +34,9 @@ public class Fotografias : MonoBehaviour
 
         // Obtener la pista correspondiente
         Sprite imagen = imagenes[numero];
+        Debug.Log("se esta enviando el dato");
         GameManager.gameManager.setImagen(numero);
-
+        Debug.Log("se ha seteado");
         // Buscar el Text hijo del botón que llamó esta función
         pistaGO.SetActive(true);
 
