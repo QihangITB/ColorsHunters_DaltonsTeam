@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     private int imagen_guadricula;
     private int imagen;
-   
+    public List<string> carrete = new List<string>();
+    public List<int> imagenes = new List<int>();
+    public List<int> posicion = new List<int>();
 
 
 
@@ -30,8 +32,7 @@ public class GameManager : MonoBehaviour
 
 
    
-
-  
+      
     
    
 

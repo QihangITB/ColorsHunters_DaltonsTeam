@@ -12,13 +12,17 @@ public class Fotografias : MonoBehaviour
     public Sprite imagen2;
     public Sprite imagen3;
     public Sprite imagen4;
-    
+    public Sprite imagen5;
+    public Sprite imagen6;
+    public Sprite imagen7;
+    public Sprite imagen8;
+
     Sprite[] imagenes;
     public GameObject pistaGO;
 
     private void Awake()
     {
-        imagenes = new Sprite[4] { imagen1,imagen2,imagen3,imagen4 };
+        imagenes = new Sprite[8] { imagen1,imagen2,imagen3,imagen4,imagen5,imagen6,imagen7,imagen8 };
     }
 
 
