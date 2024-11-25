@@ -1,4 +1,4 @@
---Insertamos algunos oftalmologos--
+-- Insertamos algunos oftalmólogos
 INSERT INTO oftalmologos (documento_identidad, nombre, apellidos, telefono, correo)
 VALUES
 ('12345678A', 'Juan', 'Pérez', '635 122 512', 'juan.perez@ejemplo.com'),
@@ -7,7 +7,7 @@ VALUES
 ('34567890D', 'Laura', 'López', '678 122 234', 'laura.lopez@ejemplo.com'),
 ('45678901E', 'Pedro', 'Sánchez', '623 122 745', 'pedro.sanchez@ejemplo.com');
 
---Insertamos algunos clientes de ejemplo--
+-- Insertamos algunos clientes de ejemplo
 INSERT INTO clientes (documento_identidad, nombre, apellidos, telefono, correo, direccion, id_oftalmologo)
 VALUES
 ('11223344A', 'Miguel', 'Ramírez', '634 123 123', 'miguel.ramirez@ejemplo.com', 'Calle Falsa 123, Madrid', 1),
