@@ -1,14 +1,14 @@
 using UnityEngine;
 using System;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 public class DBManager
 {
-    string server = "your-mysql-server";
-    string port = "port";
-    string database = "ColorHunterDB";
-    string uid = "ColorHunterDB_owner";
-    string password = "your-password";
+    string server = "";
+    string port = "";
+    string database = "";
+    string uid = "";
+    string password = "";
     string connectionString = null;
 
     public DBManager()
@@ -16,10 +16,11 @@ public class DBManager
         connectionString = $"Server={server};Port={port};Database={database};Uid={uid};Pwd={password};SslMode=Required;";
     }
 
-    public void InsertClient(string id, string name, string surnames, string phone, string email, string address, int doctor)
+    public void InsertClient(string id, string name, string surnames, int year, string phone, string email, string address, int doctor)
     {
         // Consulta SQL para insertar datos
-        string insertQuery = "INSERT INTO clientes (id, name, surnames, phone, email, address, doctor) VALUES (@id, @name, @surnames, @phone, @email, @address, @doctor)";
+        string insertQuery = "INSERT INTO clientes (documento_identidad, nombre, apellidos, edad, telefono, correo, direccion, id_oftalmologo) " +
+            "VALUES (@id, @name, @surnames, @year, @phone, @email, @address, @doctor)";
 
         try
         {
@@ -27,7 +28,7 @@ public class DBManager
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                Debug.LogError("Conexión abierta a MySQL.");
+                Debug.Log("Conexión abierta a MySQL.");
 
                 // Crear el comando SQL
                 using (var command = new MySqlCommand(insertQuery, connection))
@@ -36,6 +37,7 @@ public class DBManager
                     command.Parameters.AddWithValue("@id", id);
                     command.Parameters.AddWithValue("@name", name);
                     command.Parameters.AddWithValue("@surnames", surnames);
+                    command.Parameters.AddWithValue("@year", year);
                     command.Parameters.AddWithValue("@phone", phone);
                     command.Parameters.AddWithValue("@email", email);
                     command.Parameters.AddWithValue("@address", address);
@@ -43,7 +45,7 @@ public class DBManager
 
                     // Ejecutar el comando
                     int rowsAffected = command.ExecuteNonQuery();
-                    Debug.LogError($"Filas insertadas: {rowsAffected}");
+                    Debug.Log($"Filas insertadas: {rowsAffected}");
                 }
 
                 connection.Close();
