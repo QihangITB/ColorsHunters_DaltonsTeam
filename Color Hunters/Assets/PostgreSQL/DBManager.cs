@@ -1,19 +1,41 @@
 using UnityEngine;
 using System;
 using MySqlConnector;
+using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 public class DBManager
 {
-    string server = "";
-    string port = "";
-    string database = "";
-    string uid = "";
-    string password = "";
-    string connectionString = null;
+    string connectionString;
 
     public DBManager()
     {
-        connectionString = $"Server={server};Port={port};Database={database};Uid={uid};Pwd={password};SslMode=Required;";
+        SetConnectionData();
+    }
+
+    private void SetConnectionData()
+    {
+        string configPath = Path.Combine(Application.dataPath, "dbconfig.json");
+
+        //Verificar si el archivo existe
+        if (File.Exists(configPath))
+        {
+            //Leer todo el contenido del archivo JSON
+            string json = File.ReadAllText(configPath);
+
+            //Deserializar el JSON en un Dictionary
+            var dbConfig = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+
+            //Usar los datos para construir el connection string
+            connectionString = $"Server={dbConfig["server"]};Port={dbConfig["port"]};Database={dbConfig["database"]};Uid={dbConfig["user"]};Pwd={dbConfig["password"]};SslMode={dbConfig["ssl"]};";
+
+            Debug.Log("Connection string: " + connectionString);
+        }
+        else
+        {
+            Debug.LogError("No se encontró el archivo dbconfig.json");
+        }
     }
 
     public void InsertClient(string id, string name, string surnames, int year, string phone, string email, string address, int doctor)
