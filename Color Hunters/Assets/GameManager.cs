@@ -8,9 +8,26 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     private int imagen_guadricula;
     private int imagen;
+    public bool respuesta1 { get; set; } = false;
+    public bool respuesta2 { get; set; } = false;
+    public bool respuesta3 { get; set; } = false;
+    public bool respuesta4 { get; set; } = false;
+    public bool respuesta5 { get; set; } = false;
+    public bool respuesta6 { get; set; } = false;
+    public bool respuesta7 { get; set; } = false;
+    public bool respuesta8 { get; set; } = false;
+
+    public int cont1 { get; set; } = 1;
+    public int cont2 { get; set; } = 1;
+    public int cont3 { get; set; } = 1;
+    public int cont4 { get; set; } = 1;
+    public int cont5 { get; set; } = 1;
+    public int cont6 { get; set; } = 1;
+    public int cont7 { get; set; } = 1;
+    public int cont8 { get; set; } = 1;
+
     public List<string> carrete = new List<string>();
-    public List<int> imagenes = new List<int>();
-    public List<int> posicion = new List<int>();
+    
 
 
 

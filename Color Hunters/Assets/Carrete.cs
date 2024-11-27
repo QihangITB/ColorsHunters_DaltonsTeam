@@ -9,7 +9,7 @@ using TMPro;
 
 public class Carrete : MonoBehaviour
 {
-    public List<string> carrete = new List<string>();
+    public List<string> carrete = GameManager.gameManager.carrete;
     public List<int> imagen = new List<int>();
     public List<int> posicion = new List<int>();
     string[] imagene_1;

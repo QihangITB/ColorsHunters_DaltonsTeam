@@ -1514,6 +1514,7 @@ GameObject:
   - component: {fileID: 874170327}
   - component: {fileID: 874170326}
   - component: {fileID: 874170325}
+  - component: {fileID: 874170328}
   m_Layer: 5
   m_Name: Pista_1
   m_TagString: Untagged
@@ -1635,6 +1636,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874170323}
   m_CullTransparentMesh: 1
+--- !u!114 &874170328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874170323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagen: {fileID: 21300000, guid: fe829f42a70e46248b0609c1d1b10d0f, type: 3}
+  respuesta: 1
 --- !u!1 &938664193
 GameObject:
   m_ObjectHideFlags: 0
