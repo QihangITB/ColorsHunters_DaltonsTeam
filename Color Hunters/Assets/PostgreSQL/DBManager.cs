@@ -5,6 +5,7 @@ using MySql.Data.MySqlClient;
 public class DBManager
 {
     string server = "your-mysql-server";
+    string port = "port";
     string database = "ColorHunterDB";
     string uid = "ColorHunterDB_owner";
     string password = "your-password";
@@ -12,7 +13,7 @@ public class DBManager
 
     public DBManager()
     {
-        connectionString = $"Server={server};Port=3306;Database={database};Uid={uid};Pwd={password};SslMode=Required;";
+        connectionString = $"Server={server};Port={port};Database={database};Uid={uid};Pwd={password};SslMode=Required;";
     }
 
     public void InsertClient(string id, string name, string surnames, string phone, string email, string address, int doctor)
