@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -73,8 +74,7 @@ public class Imagenes_guardadas : MonoBehaviour
     {
 
         Image image = Captura.GetComponent<Image>();
-        Image punto= punto_focal.GetComponent<Image>();
-        
+       
         Debug.Log(numeroArray);
         
         if (Captura != null)
@@ -86,220 +86,46 @@ public class Imagenes_guardadas : MonoBehaviour
                     case 0:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_1;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_1_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_1_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_1_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_1_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_1_5;
-                                break;
-                        }   
+                       
                         break;
                     case 1:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_2;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_2_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_2_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_2_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_2_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_2_5;
-                                break;
-                        }
+                       
                         break;
                     case 2:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_3;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_3_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_3_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_3_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_3_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_3_5;
-                                break;
-                        }
+                       
                         break;
                     case 3:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_4;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_4_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_4_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_4_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_4_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_4_5;
-                                break;
-                        }
+                        
                         break;
                     case 4:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_5;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_5_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_5_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_5_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_5_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_5_5;
-                                break;
-                        }
+                       
                         break;
                     case 5:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_6;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_6_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_6_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_6_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_6_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_6_5;
-                                break;
-                        }
+                        
                         break;
                     case 6:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_7;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_7_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_7_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_7_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_7_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_7_5;
-                                break;
-                        }
+                        
                         break;
                     case 7:
                         Debug.Log("se ha impreso la foto");
                         image.sprite = imagen_8;
-                        switch (GameManager.gameManager.getImagen_imagen_guadricula())
-                        {
-                            case 1:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_1_1;
-                                break;
-                            case 2:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_8_2;
-                                break;
-                            case 3:
-                                Debug.Log("se ha impreso el punto de focoo");
-                                punto.sprite = imagen_8_3;
-                                break;
-                            case 4:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_8_4;
-                                break;
-                            case 5:
-                                Debug.Log("se ha impreso el punto de foco");
-                                punto.sprite = imagen_8_5;
-                                break;
-                        }
+                        
                         break;
                 }
+
+                settear_punto(numeroArray);
             }
             else
             {
@@ -316,7 +142,7 @@ public class Imagenes_guardadas : MonoBehaviour
     public void enviar_respuesta(int quadricula)
     {
         int numeroArray=GameManager.gameManager.getImagen();
-        
+       
 
         switch (numeroArray)
         {
@@ -329,7 +155,10 @@ public class Imagenes_guardadas : MonoBehaviour
                 else
                 {
                     GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    
                     GameManager.gameManager.cont1++;
+                    Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+
                 }
                 break;
             case 1:
@@ -414,6 +243,225 @@ public class Imagenes_guardadas : MonoBehaviour
                 {
                     GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
                     GameManager.gameManager.cont8++;
+                }
+                break;
+        }
+        settear_punto(numeroArray);
+    }
+
+    void settear_punto(int numeroArray)
+    {
+       
+        Image punto = punto_focal.GetComponent<Image>();
+
+        switch (numeroArray)
+        {
+            case 0:
+                
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_1_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_1_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_1_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_1_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_1_5;
+                        break;
+                }
+                break;
+            case 1:
+                
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_2_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_2_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_2_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_2_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_2_5;
+                        break;
+                }
+                break;
+            case 2:
+              
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_3_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_3_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_3_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_3_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_3_5;
+                        break;
+                }
+                break;
+            case 3:
+               
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_4_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_4_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_4_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_4_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_4_5;
+                        break;
+                }
+                break;
+            case 4:
+               
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_5_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_5_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_5_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_5_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_5_5;
+                        break;
+                }
+                break;
+            case 5:
+                
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_6_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_6_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_6_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_6_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_6_5;
+                        break;
+                }
+                break;
+            case 6:
+               
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_7_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_7_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_7_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_7_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_7_5;
+                        break;
+                }
+                break;
+            case 7:
+                
+                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                {
+                    case 1:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_1_1;
+                        break;
+                    case 2:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_8_2;
+                        break;
+                    case 3:
+                        Debug.Log("se ha impreso el punto de focoo");
+                        punto.sprite = imagen_8_3;
+                        break;
+                    case 4:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_8_4;
+                        break;
+                    case 5:
+                        Debug.Log("se ha impreso el punto de foco");
+                        punto.sprite = imagen_8_5;
+                        break;
                 }
                 break;
         }
