@@ -14,7 +14,7 @@ CREATE TABLE clientes (
     documento_identidad VARCHAR(20) NOT NULL UNIQUE,
     nombre VARCHAR(100) NOT NULL,
     apellidos VARCHAR(100) NOT NULL,
-    edad INT NOT NULL,
+    edad VARCHAR(2) NOT NULL,
     telefono VARCHAR(20),
     correo VARCHAR(100),
     direccion TEXT,
