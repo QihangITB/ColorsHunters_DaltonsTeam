@@ -25,4 +25,6 @@ public class Customer
         Doctor = doctor;
     }
 
+    public Customer() : this("", "", "", "", "", "", "", 0) { }
+
 }

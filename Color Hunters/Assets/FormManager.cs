@@ -26,6 +26,12 @@ public class FormManager : MonoBehaviour
         AddOptionsToDropdown(_dbManager.GetListOfDoctorsNameAndSurnames());
     }
 
+    /// <summary>
+    /// Método para manejar el inicio de sesión del usuario. 
+    /// Verifica si el cliente existe en la base de datos. Si existe, guarda los datos del cliente al game manager y navega a la siguiente escena.
+    /// Si no existe, redirige al usuario a la pantalla de registro.
+    /// </summary>
+    /// <param name="input">Campo de entrada donde el usuario introduce su documento de identidad.</param>
     public void Login(TMP_InputField input)
     {
         if (_dbManager.IsClientExist(input.text))
@@ -41,12 +47,21 @@ public class FormManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método para redirigir al usuario a la pantalla de registro.
+    /// Desactiva la pantalla de inicio de sesión y activa el de registro.
+    /// </summary>
     private void GoToRegister()
     {
         LoginGroup.SetActive(false);
         RegisterGroup.SetActive(true);
     }
 
+    /// <summary>
+    /// Método para registrar un nuevo cliente. 
+    /// Guarda los datos del cliente al game manager y lo agrega a la base de datos.
+    /// Después navega a la escena siguiente.
+    /// </summary>
     public void Register()
     {
         SaveCustomerData();
@@ -56,12 +71,19 @@ public class FormManager : MonoBehaviour
         _cambiadorEscenas.GoToScene(2);
     }
 
+    /// <summary>
+    /// Método para guardar los datos del cliente en el GameManager durante en el juego.
+    /// </summary>
     private void SaveCustomerData()
     {
         _gameManager.SetPlayerData(_dbManager.CreateCustomer());
     }
 
-    void AddOptionsToDropdown(List<string> options)
+    /// <summary>
+    /// Añade la lista de nombres y apellidos de oftalmólogos de la base de datos al Dropdown del formulario de registro.
+    /// </summary>
+    /// <param name="options">Lista de nombres y apellidos de los oftalmólogos.</param>
+    private void AddOptionsToDropdown(List<string> options)
     {
         // Cogemos el dropdown del _dbmanager para facilitar evitar crear más variables
         _dbManager.doctorDropdown.ClearOptions(); // Limpiar las opciones actuales

@@ -24,12 +24,20 @@ public class DBManager : MonoBehaviour
         //database.ConnectionTest();
     }
 
+    /// <summary>
+    /// Verifica si un cliente ya existe en la base de datos basado en el documento de identidad.
+    /// </summary>
+    /// <param name="documentId">El documento de identidad del cliente.</param>
+    /// <returns>Devuelve `true` si el cliente existe, `false` si no.</returns>
     public bool IsClientExist(string documentId)
     {
         int notFound = 0;
         return (database.GetClientIdByDocumentId(documentId) != notFound);
     }
 
+    /// <summary>
+    /// Agrega un nuevo cliente a la base de datos usando la información proporcionada en los campos de entrada.
+    /// </summary>
     public void AddNewClient()
     {
         database.InsertClient(
@@ -40,10 +48,14 @@ public class DBManager : MonoBehaviour
                 phoneInput.text,
                 emailInput.text,
                 addressInput.text,
-                AssignDoctorId(doctorDropdown.options[doctorDropdown.value].text)
+                GetDoctorDatabaseId(doctorDropdown.options[doctorDropdown.value].text)
                );
     }
 
+    /// <summary>
+    /// Crea un nuevo objeto `Customer` usando los datos proporcionados en los campos de entrada, asignando valores predeterminados a los campos vacíos.
+    /// </summary>
+    /// <returns>Un nuevo objeto `Customer` con la información proporcionada.</returns>
     public Customer CreateCustomer()
     {
         // El documento de identidad nunca sera nulo o vacío
@@ -56,11 +68,15 @@ public class DBManager : MonoBehaviour
         string phone = string.IsNullOrWhiteSpace(phoneInput.text) ? "" : phoneInput.text;
         string email = string.IsNullOrWhiteSpace(emailInput.text) ? "" : emailInput.text;
         string address = string.IsNullOrWhiteSpace(addressInput.text) ? "" : addressInput.text;
-        int doctorId = AssignDoctorId(doctorDropdown.options[doctorDropdown.value].text);
+        int doctorId = GetDoctorDatabaseId(doctorDropdown.options[doctorDropdown.value].text);
 
         return new Customer(id, name, surnames, age, phone, email, address, doctorId);
     }
 
+    /// <summary>
+    /// Obtiene una lista de nombres y apellidos de todos los oftalmólogos desde la base de datos.
+    /// </summary>
+    /// <returns>Una lista de cadenas con los nombres completos de los oftalmólogos.</returns>
     public List<string> GetListOfDoctorsNameAndSurnames()
     {
         List<string> resultList = new List<string>();
@@ -70,11 +86,15 @@ public class DBManager : MonoBehaviour
         {
             resultList.Add(doc.Name + " " + doc.Surnames);
         }
-
         return resultList;
     }
 
-    public int AssignDoctorId(string nameAndSurname)
+    /// <summary>
+    /// Obtiene el ID de oftalmólogo a través del nombre completo del oftalmólogo.
+    /// </summary>
+    /// <param name="nameAndSurname">El nombre completo del oftalmólogo.</param>
+    /// <returns>El ID del oftalmólogo o 0 si no se encuentra.</returns>
+    public int GetDoctorDatabaseId(string nameAndSurname)
     {
         List<Doctor> doctors = database.GetAllDoctors();
 
@@ -82,10 +102,10 @@ public class DBManager : MonoBehaviour
         {
             if (doc.Name + " " + doc.Surnames == nameAndSurname)
             {
-                return database.GetDoctorIdByDocumentId(doc.Id);
+                // doc.Id es el documento de identidad, con la funcion obtenemos el id de la db
+                return database.GetDoctorIdByDocumentId(doc.Id); 
             }
         }
-
         return 0;
     }
 }
