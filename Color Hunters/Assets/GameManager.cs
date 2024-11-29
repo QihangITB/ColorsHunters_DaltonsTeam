@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
     public int cont8 { get; set; } = 1;
 
     public List<string> carrete = new List<string>();
-    
 
+    public Customer player;
 
 
     private void Awake()
@@ -94,5 +94,11 @@ public class GameManager : MonoBehaviour
     public int getImagen_imagen_guadricula() { return imagen_guadricula; }
 
 
+
+
+    public void SetPlayerData(Customer inputsData)
+    {
+        this.player = inputsData;
+    }
 
 }
