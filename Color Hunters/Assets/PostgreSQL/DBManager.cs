@@ -15,26 +15,31 @@ public class DBManager : MonoBehaviour
     public TMP_InputField addressInput;
     public TMP_InputField doctorInput;
 
-    private DBConnection _db;
+    public DBConnection database;
 
     void Start()
     {
-        _db = new DBConnection();
-        //_db.Test();
+        database = new DBConnection();
+        //database.ConnectionTest();
     }
 
-    public void InsertFunction()
+    public bool IsClientExist(string documentId)
     {
-        _db.InsertClient(
-            idInput.text,
-            nameInput.text,
-            surnamesInput.text,
-            ageInput.text,
-            phoneInput.text,
-            emailInput.text,
-            addressInput.text,
-            int.Parse(doctorInput.text)
-           );
+        int notFound = 0;
+        return (database.GetClientIdByDocumentId(documentId) != notFound);
+    }
 
+    public void AddNewClient()
+    {
+        database.InsertClient(
+                idInput.text,
+                nameInput.text,
+                surnamesInput.text,
+                ageInput.text,
+                phoneInput.text,
+                emailInput.text,
+                addressInput.text,
+                int.Parse(doctorInput.text)
+               );
     }
 }

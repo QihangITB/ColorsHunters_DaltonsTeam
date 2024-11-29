@@ -31,7 +31,7 @@ public class DBConnection
             //Usar los datos para construir el connection string
             connectionString = $"Server={dbConfig["server"]};Port={dbConfig["port"]};Database={dbConfig["database"]};Uid={dbConfig["user"]};Pwd={dbConfig["password"]};SslMode={dbConfig["ssl"]};";
 
-            Debug.Log("Connection string: " + connectionString);
+            Debug.Log("Credenciales encontradas");
         }
         else
         {
@@ -80,7 +80,38 @@ public class DBConnection
         }
     }
 
-    public void Test()
+    public int GetClientIdByDocumentId(string documentId)
+    {
+        int result = 0;
+        try
+        {
+            // Crear una conexión a la base de datos
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();  // Abrir la conexión
+
+                string query = "SELECT id_cliente FROM clientes WHERE documento_identidad = @documentId";
+
+                // Crear un comando SQL
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    // Usar parámetros para evitar SQL Injection
+                    cmd.Parameters.AddWithValue("@documentId", documentId);
+
+                    result = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier error que ocurra durante la conexión o la consulta
+            Debug.LogError("Error al conectar a la base de datos: " + ex.Message);
+        }
+
+        return result; // Devuelve 0 si no se encuentra el cliente.
+    }
+
+    public void ConnectionTest()
     {
         try
         {
