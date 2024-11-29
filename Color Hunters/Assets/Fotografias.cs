@@ -16,6 +16,7 @@ public class Fotografias : MonoBehaviour
     public Sprite imagen6;
     public Sprite imagen7;
     public Sprite imagen8;
+    int num_seleccion;
 
     Sprite[] imagenes;
     public GameObject pistaGO;
@@ -38,10 +39,7 @@ public class Fotografias : MonoBehaviour
 
         // Obtener la pista correspondiente
         Sprite imagen = imagenes[numero];
-        Debug.Log("se esta enviando el dato");
-        GameManager.gameManager.setImagen(numero);
-        GameManager.gameManager.setQuadricula(1);
-        Debug.Log("se ha seteado");
+        num_seleccion = numero;
         // Buscar el Text hijo del botón que llamó esta función
         pistaGO.SetActive(true);
 
@@ -63,6 +61,14 @@ public class Fotografias : MonoBehaviour
         {
             Debug.LogError("No se encontró el GameObject llamado 'Pista'.");
         }
+    }
+
+    public void settear_imagen()
+    {
+        Debug.Log("se esta enviando el dato");
+        GameManager.gameManager.setImagen(num_seleccion);
+        GameManager.gameManager.setQuadricula(1);
+        Debug.Log("se ha seteado");
     }
 }
     

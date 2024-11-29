@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
     public int cont8 { get; set; } = 1;
 
     public List<string> carrete = new List<string>();
-    
+    public List<int> posiciones = new List<int>();
+
 
 
 
