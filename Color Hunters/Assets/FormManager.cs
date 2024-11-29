@@ -10,10 +10,12 @@ public class FormManager : MonoBehaviour
     public GameObject RegisterGroup;
 
     private DBManager _dbManager;
+    private CambiadorEscenas _cambiadorEscenas;
 
     void Start()
     {
         _dbManager = gameObject.GetComponent<DBManager>();
+        _cambiadorEscenas = gameObject.GetComponent<CambiadorEscenas>();
         LoginGroup.SetActive(true);
         RegisterGroup.SetActive(false);
     }
@@ -22,8 +24,9 @@ public class FormManager : MonoBehaviour
     {
         if (_dbManager.IsClientExist(input.text))
         {
-            //Siguente scena
-
+            // Indice 2 es la escena del libro magico
+            Debug.Log(_cambiadorEscenas);
+            _cambiadorEscenas.GoToScene(2);
         }
         else
         {
@@ -35,5 +38,13 @@ public class FormManager : MonoBehaviour
     {
         LoginGroup.SetActive(false);
         RegisterGroup.SetActive(true);
+    }
+
+    public void Register()
+    {
+        _dbManager.AddNewClient();
+
+        // Indice 2 es la escena del libro magico
+        _cambiadorEscenas.GoToScene(2);
     }
 }

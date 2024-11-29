@@ -4664,6 +4664,7 @@ GameObject:
   - component: {fileID: 1992904677}
   - component: {fileID: 1992904676}
   - component: {fileID: 1992904678}
+  - component: {fileID: 1992904679}
   m_Layer: 0
   m_Name: FormSceneManager
   m_TagString: Untagged
@@ -4720,6 +4721,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoginGroup: {fileID: 1336542572}
   RegisterGroup: {fileID: 665283101}
+--- !u!114 &1992904679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992904675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5125c7afe418a8f468c0f003f28c82de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1999747503
 GameObject:
   m_ObjectHideFlags: 0
