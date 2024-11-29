@@ -27,7 +27,7 @@ public class FormManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Método para manejar el inicio de sesión del usuario. 
+    /// Mï¿½todo para manejar el inicio de sesiï¿½n del usuario. 
     /// Verifica si el cliente existe en la base de datos. Si existe, guarda los datos del cliente al game manager y navega a la siguiente escena.
     /// Si no existe, redirige al usuario a la pantalla de registro.
     /// </summary>
@@ -48,8 +48,8 @@ public class FormManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Método para redirigir al usuario a la pantalla de registro.
-    /// Desactiva la pantalla de inicio de sesión y activa el de registro.
+    /// Mï¿½todo para redirigir al usuario a la pantalla de registro.
+    /// Desactiva la pantalla de inicio de sesiï¿½n y activa el de registro.
     /// </summary>
     private void GoToRegister()
     {
@@ -58,9 +58,9 @@ public class FormManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Método para registrar un nuevo cliente. 
+    /// Mï¿½todo para registrar un nuevo cliente. 
     /// Guarda los datos del cliente al game manager y lo agrega a la base de datos.
-    /// Después navega a la escena siguiente.
+    /// Despuï¿½s navega a la escena siguiente.
     /// </summary>
     public void Register()
     {
@@ -72,7 +72,7 @@ public class FormManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Método para guardar los datos del cliente en el GameManager durante en el juego.
+    /// Mï¿½todo para guardar los datos del cliente en el GameManager durante en el juego.
     /// </summary>
     private void SaveCustomerData()
     {
@@ -80,19 +80,19 @@ public class FormManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Añade la lista de nombres y apellidos de oftalmólogos de la base de datos al Dropdown del formulario de registro.
+    /// Aï¿½ade la lista de nombres y apellidos de oftalmï¿½logos de la base de datos al Dropdown del formulario de registro.
     /// </summary>
-    /// <param name="options">Lista de nombres y apellidos de los oftalmólogos.</param>
+    /// <param name="options">Lista de nombres y apellidos de los oftalmï¿½logos.</param>
     private void AddOptionsToDropdown(List<string> options)
     {
-        // Cogemos el dropdown del _dbmanager para facilitar evitar crear más variables
+        // Cogemos el dropdown del _dbmanager para facilitar evitar crear mï¿½s variables
         _dbManager.doctorDropdown.ClearOptions(); // Limpiar las opciones actuales
 
         List<TMP_Dropdown.OptionData> dropdownOptions = new List<TMP_Dropdown.OptionData>();
 
         foreach (string option in options)
         {
-            dropdownOptions.Add(new TMP_Dropdown.OptionData(option)); // Crear una opción con el texto
+            dropdownOptions.Add(new TMP_Dropdown.OptionData(option)); // Crear una opciï¿½n con el texto
         }
 
         _dbManager.doctorDropdown.AddOptions(dropdownOptions);

@@ -36,7 +36,7 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Agrega un nuevo cliente a la base de datos usando la información proporcionada en los campos de entrada.
+    /// Agrega un nuevo cliente a la base de datos usando la informaciï¿½n proporcionada en los campos de entrada.
     /// </summary>
     public void AddNewClient()
     {
@@ -53,15 +53,15 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Crea un nuevo objeto `Customer` usando los datos proporcionados en los campos de entrada, asignando valores predeterminados a los campos vacíos.
+    /// Crea un nuevo objeto `Customer` usando los datos proporcionados en los campos de entrada, asignando valores predeterminados a los campos vacï¿½os.
     /// </summary>
-    /// <returns>Un nuevo objeto `Customer` con la información proporcionada.</returns>
+    /// <returns>Un nuevo objeto `Customer` con la informaciï¿½n proporcionada.</returns>
     public Customer CreateCustomer()
     {
-        // El documento de identidad nunca sera nulo o vacío
+        // El documento de identidad nunca sera nulo o vacï¿½o
         string id = idInput.text;
 
-        // Manejar valores nulos o vacís y asignar valores predeterminados
+        // Manejar valores nulos o vacï¿½s y asignar valores predeterminados
         string name = string.IsNullOrWhiteSpace(nameInput.text) ? "" : nameInput.text;
         string surnames = string.IsNullOrWhiteSpace(surnamesInput.text) ? "" : surnamesInput.text;
         string age = string.IsNullOrWhiteSpace(ageInput.text) ? "" : ageInput.text;
@@ -74,9 +74,9 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Obtiene una lista de nombres y apellidos de todos los oftalmólogos desde la base de datos.
+    /// Obtiene una lista de nombres y apellidos de todos los oftalmï¿½logos desde la base de datos.
     /// </summary>
-    /// <returns>Una lista de cadenas con los nombres completos de los oftalmólogos.</returns>
+    /// <returns>Una lista de cadenas con los nombres completos de los oftalmï¿½logos.</returns>
     public List<string> GetListOfDoctorsNameAndSurnames()
     {
         List<string> resultList = new List<string>();
@@ -90,10 +90,10 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Obtiene el ID de oftalmólogo a través del nombre completo del oftalmólogo.
+    /// Obtiene el ID de oftalmï¿½logo a travï¿½s del nombre completo del oftalmï¿½logo.
     /// </summary>
-    /// <param name="nameAndSurname">El nombre completo del oftalmólogo.</param>
-    /// <returns>El ID del oftalmólogo o 0 si no se encuentra.</returns>
+    /// <param name="nameAndSurname">El nombre completo del oftalmï¿½logo.</param>
+    /// <returns>El ID del oftalmï¿½logo o 0 si no se encuentra.</returns>
     public int GetDoctorDatabaseId(string nameAndSurname)
     {
         List<Doctor> doctors = database.GetAllDoctors();
