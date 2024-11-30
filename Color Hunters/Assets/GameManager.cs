@@ -27,9 +27,10 @@ public class GameManager : MonoBehaviour
     public int cont8 { get; set; } = 1;
 
     public List<string> carrete = new List<string>();
+
     public List<int> posiciones = new List<int>();
 
-
+    public Customer player;
 
 
     private void Awake()
@@ -72,7 +73,7 @@ public class GameManager : MonoBehaviour
        
     }
 
-    // Esta función se llama cuando la escena ha terminado de cargarse
+    // Esta funciÃ³n se llama cuando la escena ha terminado de cargarse
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 
@@ -95,5 +96,11 @@ public class GameManager : MonoBehaviour
     public int getImagen_imagen_guadricula() { return imagen_guadricula; }
 
 
+
+
+    public void SetPlayerData(Customer inputsData)
+    {
+        this.player = inputsData;
+    }
 
 }
