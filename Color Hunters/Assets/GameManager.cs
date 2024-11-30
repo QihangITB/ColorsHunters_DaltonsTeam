@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     public List<string> carrete = new List<string>();
 
+    public List<int> posiciones = new List<int>();
+
     public Customer player;
 
 
@@ -71,7 +73,7 @@ public class GameManager : MonoBehaviour
        
     }
 
-    // Esta función se llama cuando la escena ha terminado de cargarse
+    // Esta funciÃ³n se llama cuando la escena ha terminado de cargarse
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 
