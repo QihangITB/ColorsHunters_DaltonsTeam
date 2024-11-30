@@ -5,7 +5,7 @@ VALUES
 ('87654321B', 'Ana', 'Gómez', '665 122 323', 'ana.gomez@ejemplo.com'),
 ('23456789C', 'Carlos', 'Martínez', '697 434 512', 'carlos.martinez@ejemplo.com'),
 ('34567890D', 'Laura', 'López', '678 122 234', 'laura.lopez@ejemplo.com'),
-('45678901E', 'Pedro', 'García', '623 122 745', 'pedro.sanchez@ejemplo.com');
+('45678901E', 'Pedro', 'García', '623 122 745', 'pedro.garcia@ejemplo.com');
 
 -- Insertamos algunos clientes de ejemplo
 INSERT INTO clientes (documento_identidad, nombre, apellidos, edad, telefono, correo, direccion, id_oftalmologo)
@@ -15,3 +15,5 @@ VALUES
 ('33445566C', 'Luis', 'Fernández', '18', '622 345 345', 'luis.fernandez@ejemplo.com', 'Plaza Mayor 789, Sevilla', 3),
 ('44556677D', 'Marta', 'García', '24', '666 456 456', 'marta.garcia@ejemplo.com', 'Carrer de Gran Via 101, Barcelona', 3),
 ('55667788E', 'Roberto', 'López', '13', '678 567 567', 'roberto.lopez@ejemplo.com', 'Calle del Sol 202, Málaga', 2);
+
+-- Insertamos algunos resultados de ejemplo
