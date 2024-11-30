@@ -36,7 +36,7 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Agrega un nuevo cliente a la base de datos usando la informaci�n proporcionada en los campos de entrada.
+    /// Agrega un nuevo cliente a la base de datos usando la informacion proporcionada en los campos de entrada.
     /// </summary>
     public void AddNewClient()
     {
@@ -53,7 +53,7 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Crea un nuevo objeto `Customer` usando los datos proporcionados en los campos de entrada, asignando valores predeterminados a los campos vac�os.
+    /// Crea un nuevo objeto `Customer` usando los datos proporcionados en los campos de entrada, asignando valores predeterminados a los campos vacios.
     /// </summary>
     /// <returns>Un nuevo objeto `Customer` con la informaci�n proporcionada.</returns>
     public Customer CreateCustomer()
@@ -74,9 +74,9 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Obtiene una lista de nombres y apellidos de todos los oftalm�logos desde la base de datos.
+    /// Obtiene una lista de nombres y apellidos de todos los oftalmologos desde la base de datos.
     /// </summary>
-    /// <returns>Una lista de cadenas con los nombres completos de los oftalm�logos.</returns>
+    /// <returns>Una lista de cadenas con los nombres completos de los oftalmologos.</returns>
     public List<string> GetListOfDoctorsNameAndSurnames()
     {
         List<string> resultList = new List<string>();
@@ -90,10 +90,10 @@ public class DBManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Obtiene el ID de oftalm�logo a trav�s del nombre completo del oftalm�logo.
+    /// Obtiene el ID de oftalmologo a traves del nombre completo del oftalmologo.
     /// </summary>
-    /// <param name="nameAndSurname">El nombre completo del oftalm�logo.</param>
-    /// <returns>El ID del oftalm�logo o 0 si no se encuentra.</returns>
+    /// <param name="nameAndSurname">El nombre completo del oftalmologo.</param>
+    /// <returns>El ID del oftalmologo o 0 si no se encuentra.</returns>
     public int GetDoctorDatabaseId(string nameAndSurname)
     {
         List<Doctor> doctors = database.GetAllDoctors();

@@ -16,7 +16,7 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Lee el archivo JSON de configuración y establece la cadena de conexión a la base de datos.
+    /// Lee el archivo JSON de configuracion y establece la cadena de conexión a la base de datos.
     /// </summary>
     private void SetConnectionData()
     {
@@ -39,7 +39,7 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Realiza una prueba de conexión a la base de datos.
+    /// Realiza una prueba de conexion a la base de datos.
     /// </summary>
     public void ConnectionTest()
     {
@@ -169,10 +169,10 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Obtiene una lista de oftalmólogos desde la base de datos.
+    /// Obtiene una lista de oftalmologos desde la base de datos.
     /// </summary>
     /// <returns>
-    /// Una lista de objetos <see cref="Doctor"/> representando los oftalmólogos obtenidos de la base de datos.
+    /// Una lista de objetos <see cref="Doctor"/> representando los oftalmologos obtenidos de la base de datos.
     /// </returns>
     public List<Doctor> GetAllDoctors()
     {
