@@ -430,13 +430,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a645a3c15551a43b2e2627fc7b1d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagen1: {fileID: 21300000, guid: 3327ca64134e4914bb9e7eb3650189d8, type: 3}
-  imagen2: {fileID: 21300000, guid: bd3542e911ed5cd4dbdbbda83ec89ef0, type: 3}
-  imagen3: {fileID: 0}
-  imagen4: {fileID: 0}
-  imagen5: {fileID: 0}
-  imagen6: {fileID: 0}
-  imagen7: {fileID: 0}
+  imagen1: {fileID: 21300000, guid: b4600257c96d39e4098103bb5634d96d, type: 3}
+  imagen2: {fileID: 21300000, guid: 3327ca64134e4914bb9e7eb3650189d8, type: 3}
+  imagen3: {fileID: 21300000, guid: 3ba3fd55558a2e14087b6186316d180e, type: 3}
+  imagen4: {fileID: 21300000, guid: 90e59eaab24199441bbdc81cdb4637e5, type: 3}
+  imagen5: {fileID: 21300000, guid: d8794d68fc9e44e4ea132bc5bbcf049f, type: 3}
+  imagen6: {fileID: 21300000, guid: 4e8f7f0fc66395e4eb46a3683610807b, type: 3}
+  imagen7: {fileID: 21300000, guid: ca07476019f1f2345bb8091bbe4e06d1, type: 3}
   imagen8: {fileID: 0}
   pistaGO: {fileID: 936802067}
 --- !u!1 &269088235
@@ -520,7 +520,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 269088238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240918409}
+        m_TargetAssemblyTypeName: Fotografias, Assembly-CSharp
+        m_MethodName: poner_imagen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &269088238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +785,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 364405297}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240918409}
+        m_TargetAssemblyTypeName: Fotografias, Assembly-CSharp
+        m_MethodName: poner_imagen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &364405297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,7 +1397,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 633469810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240918409}
+        m_TargetAssemblyTypeName: Fotografias, Assembly-CSharp
+        m_MethodName: poner_imagen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &633469810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1905,7 +1941,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 985230857}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240918409}
+        m_TargetAssemblyTypeName: Fotografias, Assembly-CSharp
+        m_MethodName: poner_imagen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &985230857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,7 +2148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1006237138}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240918409}
+        m_TargetAssemblyTypeName: Fotografias, Assembly-CSharp
+        m_MethodName: poner_imagen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1006237138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,7 +3692,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1948600293}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240918409}
+        m_TargetAssemblyTypeName: Fotografias, Assembly-CSharp
+        m_MethodName: poner_imagen
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1948600293
 MonoBehaviour:
   m_ObjectHideFlags: 0

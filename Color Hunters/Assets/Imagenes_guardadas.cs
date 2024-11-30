@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Imagenes_guardadas : MonoBehaviour
 {
+
+    // Nuestra base de datos tocha en e programa con las imagenes
     public Sprite imagen_1;
     public Sprite imagen_2;
     public Sprite imagen_3;
@@ -57,29 +59,29 @@ public class Imagenes_guardadas : MonoBehaviour
     public Sprite imagen_8_5;
 
 
-    public GameObject Captura;
-    public GameObject punto_focal;
+    public GameObject Captura; // donde se mostrara la imagen
+    public GameObject punto_focal; // donde se ira cambiando el punto que tiene que encontrar en jugador con sus diferentes versiones
 
 
     
     private void Awake()
     {
        
-        changeImage(GameManager.gameManager.getImagen());
+        changeImage(GameManager.gameManager.getImagen()); // llama nada mas despertar la funcion poara asociar imagen
        
     }
 
 
     public void changeImage(int numeroArray)
     {
-
+        GameManager.gameManager.setQuadricula(1); // se setea en 0% de contraste cada vez que el usuario abre imagen
         Image image = Captura.GetComponent<Image>();
        
         Debug.Log(numeroArray);
         
         if (Captura != null)
         {
-            if (image != null)
+            if (image != null) // comprueba que la imagen no sea null y en caso de cada numero pues mete en la imagen la imagen correspodiente
             {
                 switch (numeroArray)
                 {
@@ -125,7 +127,7 @@ public class Imagenes_guardadas : MonoBehaviour
                         break;
                 }
 
-                settear_punto(numeroArray);
+                settear_punto(numeroArray); // una vez seteada la imagen setea su punto de fuga
             }
             else
             {
@@ -138,6 +140,7 @@ public class Imagenes_guardadas : MonoBehaviour
         }
     }
 
+    // funcion que usaran los botones de la camara para asociar si al pulsar estas dando la respuesta correcta, ajustar al gusto en el if pertinente
 
     public void enviar_respuesta(int quadricula)
     {
@@ -148,17 +151,24 @@ public class Imagenes_guardadas : MonoBehaviour
         {
             case 0:
                 Debug.Log("se ha impreso la foto");
-                if (quadricula == 8)
+                if (quadricula == 8)  // este es el if que se tiene que ajustar a cada imagen para saber donde el objeto de la pista
                 {
-                    GameManager.gameManager.respuesta1 = true;
+                    GameManager.gameManager.respuesta1 = true; // setea el boolean pertinente en true
+                    Debug.Log(GameManager.gameManager.respuesta1);
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    
-                    GameManager.gameManager.cont1++;
-                    Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5) // para que no siga aumentado y vaya buscando puntos de fuja que no existen
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1); // sistema automatizado para ir ajustandole el contraste
 
+                        GameManager.gameManager.cont1++; // contador para sacar conclusiones del jugador
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
             case 1:
@@ -169,80 +179,143 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    GameManager.gameManager.cont2++;
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5)
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+
+                        GameManager.gameManager.cont2++;
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
             case 2:
                 Debug.Log("se ha impreso la foto");
-                if (quadricula == 6)
+                if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta3 = true;
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    GameManager.gameManager.cont3++;
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5)
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+
+                        GameManager.gameManager.cont3++;
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
             case 3:
                 Debug.Log("se ha impreso la foto");
-                if (quadricula == 6)
+                if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta4 = true;
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    GameManager.gameManager.cont4++;
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5)
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+
+                        GameManager.gameManager.cont4++;
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
             case 4:
                 Debug.Log("se ha impreso la foto");
-                if (quadricula == 6)
+                if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta5 = true;
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    GameManager.gameManager.cont5++;
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5)
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+
+                        GameManager.gameManager.cont5++;
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
             case 5:
                 Debug.Log("se ha impreso la foto");
-                if (quadricula == 6)
+                if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta6 = true;
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    GameManager.gameManager.cont6++;
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5)
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+
+                        GameManager.gameManager.cont6++;
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
             case 6:
                 Debug.Log("se ha impreso la foto");
-                if (quadricula == 6)
+                if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta7 = true;
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    GameManager.gameManager.cont7++;
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5)
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+
+                        GameManager.gameManager.cont7++;
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
             case 7:
                 Debug.Log("se ha impreso la foto");
-                if (quadricula == 6)
+                if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta8 = true;
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
-                    GameManager.gameManager.cont8++;
+                    if (GameManager.gameManager.getImagen_imagen_guadricula() == 5)
+                    {
+                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+                    }
+                    else
+                    {
+                        GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+
+                        GameManager.gameManager.cont8++;
+                        Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    }
                 }
                 break;
         }
@@ -252,32 +325,32 @@ public class Imagenes_guardadas : MonoBehaviour
     void settear_punto(int numeroArray)
     {
        
-        Image punto = punto_focal.GetComponent<Image>();
+        Image punto = punto_focal.GetComponent<Image>(); // agarra componente de imagen del punto de fuga
 
         switch (numeroArray)
         {
-            case 0:
+            case 0: // en base a la imagen que tiene puesta y el nivel de contraste pues pone la imagen pertienente
                 
                 switch (GameManager.gameManager.getImagen_imagen_guadricula())
                 {
                     case 1:
-                        //Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_1;
                         break;
                     case 2:
-                        //Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_2;
                         break;
                     case 3:
-                        //Debug.Log("se ha impreso el punto de focoo");
+                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_1_3;
                         break;
                     case 4:
-                        //Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_4;
                         break;
                     case 5:
-                        //Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_5;
                         break;
                 }
@@ -287,23 +360,23 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.getImagen_imagen_guadricula())
                 {
                     case 1:
-                        //Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_1;
                         break;
                     case 2:
-                        //Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_2;
                         break;
                     case 3:
-                        //Debug.Log("se ha impreso el punto de focoo");
+                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_2_3;
                         break;
                     case 4:
-                       // Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_4;
                         break;
                     case 5:
-                      //  Debug.Log("se ha impreso el punto de foco");
+                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_5;
                         break;
                 }

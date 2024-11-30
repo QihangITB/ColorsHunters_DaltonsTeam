@@ -6,7 +6,7 @@ using TMPro;
 
 public class Pistas : MonoBehaviour
 {
-    
+    // las pistas que se ponen en cada apartado, ponendalas aqui y se rellenara solo
     string pista1_1 = "pista1";
     string pista1_2 = "pista2";
     string pista1_3 = "pista3";

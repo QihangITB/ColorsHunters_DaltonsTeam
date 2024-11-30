@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ocultar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // script para ocultar cosas
     public GameObject pista;
 
 

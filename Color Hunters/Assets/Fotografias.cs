@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Fotografias : MonoBehaviour
 {
 
-
+    // imagenes generales del mapa mundial
     public Sprite imagen1 ;
     public Sprite imagen2;
     public Sprite imagen3;
@@ -19,15 +19,15 @@ public class Fotografias : MonoBehaviour
     int num_seleccion;
 
     Sprite[] imagenes;
-    public GameObject pistaGO;
+    public GameObject pistaGO; // campo donde en su componente imagen pondremos las imagenes
 
     private void Awake()
     {
-        imagenes = new Sprite[8] { imagen1,imagen2,imagen3,imagen4,imagen5,imagen6,imagen7,imagen8 };
+        imagenes = new Sprite[8] { imagen1,imagen2,imagen3,imagen4,imagen5,imagen6,imagen7,imagen8 }; // cargamos las imagenes
     }
 
 
-    public void     poner_imagen(int numero)
+    public void  poner_imagen(int numero)
     {
         // Verificar que el índice esté dentro del rango del arreglo
         if (numero < 0 || numero >= imagenes.Length)
@@ -64,9 +64,9 @@ public class Fotografias : MonoBehaviour
     }
 
     public void settear_imagen()
-    {
+    {  // se envia el dato a la camara
         Debug.Log("se esta enviando el dato");
-        GameManager.gameManager.setImagen(num_seleccion);
+        GameManager.gameManager.setImagen(num_seleccion); 
         GameManager.gameManager.setQuadricula(1);
         Debug.Log("se ha seteado");
     }
