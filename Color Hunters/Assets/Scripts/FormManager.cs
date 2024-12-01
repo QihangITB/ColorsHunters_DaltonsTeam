@@ -65,7 +65,7 @@ public class FormManager : MonoBehaviour
     public void Register()
     {
         SaveCustomerData();
-        _dbManager.AddNewClient();
+        _dbManager.AddNewCustomer();
 
         // Indice 2 es la escena del libro magico
         _cambiadorEscenas.GoToScene(2);
