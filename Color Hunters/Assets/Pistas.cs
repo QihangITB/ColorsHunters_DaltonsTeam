@@ -50,8 +50,6 @@ public class Pistas : MonoBehaviour
             {
                 Debug.LogError("El objeto 'Pista' no tiene un componente Text.");
             }
-
-            
         }
         else
         {

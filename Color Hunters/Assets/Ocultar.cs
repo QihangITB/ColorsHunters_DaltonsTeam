@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Ocultar : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject pista;
-
-
 
     public void ocultar()
     {

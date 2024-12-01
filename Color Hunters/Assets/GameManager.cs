@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
-    private int imagen_guadricula;
+
+    private int imagenCuadricula;
     private int imagen;
     public bool respuesta1 { get; set; } = false;
     public bool respuesta2 { get; set; } = false;
@@ -45,22 +46,14 @@ public class GameManager : MonoBehaviour
             gameManager = this; // Establece la instancia del GameManager
             DontDestroyOnLoad(this.gameObject);
             // No destruir este objeto al cargar una nueva escena
-            // Inicializa el stack
         }
     }
 
-
-   
-      
-    
-   
-
     public void ChangeScene(int sceneIndex)
     {
-
         SceneManager.LoadScene(sceneIndex);
-
     }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -77,26 +70,21 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 
-
-        
-
     }
 
-    public void setImagen(int index)
+    public void SetImagen(int index)
     {
         imagen = index;
     }
 
-    public void setQuadricula(int guadricula)
+    public void SetCuadricula(int cuadricula)
     {
-        imagen_guadricula = guadricula;
+        imagenCuadricula = cuadricula;
     }
 
-    public int getImagen() { return imagen; }
-    public int getImagen_imagen_guadricula() { return imagen_guadricula; }
+    public int GetImagen() { return imagen; }
 
-
-
+    public int GetImagenCuadricula() { return imagenCuadricula; }
 
     public void SetPlayerData(Customer inputsData)
     {

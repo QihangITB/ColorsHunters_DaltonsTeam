@@ -15,19 +15,20 @@ public class Carrete : MonoBehaviour
     private void Awake()
     {
         imagene_1 = new string[9] { "flores", "Castillo", "sumama", "alicante", "picante", "imagen_1_6", "imagen_1_7", "imagen_1_8", "imagen_1_9" };
-       // Debug.Log("Estado del carrete en el GameManager antes de llamar a rellenar(): " + string.Join(", ", GameManager.gameManager.carrete));
-        rellenar();
+        //Debug.Log("Estado del carrete en el GameManager antes de llamar a rellenar(): " + string.Join(", ", GameManager.gameManager.carrete));
+        Rellenar();
 
     }
 
-    public void rellenar()
+    public void Rellenar()
     {
-        int nuevaImagen = GameManager.gameManager.getImagen();
-        Debug.Log("el numero de carga del acrrete es: " + GameManager.gameManager.carrete.Count);
+        int nuevaImagen = GameManager.gameManager.GetImagen();
+        Debug.Log("el numero de carga del carrete es: " + GameManager.gameManager.carrete.Count);
         foreach (var car in GameManager.gameManager.carrete)
         {
             Debug.Log("EN EL CARRETE HAY " + car);
         }
+
         // Asegurar el tamaño máximo del carrete
         if (GameManager.gameManager.carrete.Count >= 8)
         {
@@ -36,9 +37,8 @@ public class Carrete : MonoBehaviour
         }
 
         // Agregar nuevas entradas
-
         Debug.Log(" int nuevaimagen " + nuevaImagen);
-        GameManager.gameManager.carrete.Add(seleccion(nuevaImagen));
+        GameManager.gameManager.carrete.Add(Seleccion(nuevaImagen));
         //Debug.Log("Después de modificar: " + string.Join(", ", GameManager.gameManager.carrete));
         GameManager.gameManager.posiciones.Add(nuevaImagen);
 
@@ -69,15 +69,10 @@ public class Carrete : MonoBehaviour
         }
     }
 
-    public string seleccion(int numeroArray)
+    public string Seleccion(int numeroArray)
     {
-        string anyadir = "";
-        anyadir = imagene_1[numeroArray];
-        return anyadir;
-
+        return imagene_1[numeroArray];
     }
-
-
 }
 
 

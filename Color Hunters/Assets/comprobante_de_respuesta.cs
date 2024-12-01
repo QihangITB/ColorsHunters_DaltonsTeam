@@ -10,7 +10,7 @@ public class comprobante_de_respuesta : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-       Sprite resu_imagen= gameObject.GetComponent<Image>().sprite;
+        Sprite resu_imagen= gameObject.GetComponent<Image>().sprite;
         Debug.Log(GameManager.gameManager.respuesta1);
         switch (respuesta)
         {

@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class Fotografias : MonoBehaviour
 {
-
-
-    public Sprite imagen1 ;
+    public Sprite imagen1;
     public Sprite imagen2;
     public Sprite imagen3;
     public Sprite imagen4;
@@ -16,6 +14,7 @@ public class Fotografias : MonoBehaviour
     public Sprite imagen6;
     public Sprite imagen7;
     public Sprite imagen8;
+
     int num_seleccion;
 
     Sprite[] imagenes;
@@ -27,7 +26,7 @@ public class Fotografias : MonoBehaviour
     }
 
 
-    public void     poner_imagen(int numero)
+    public void poner_imagen(int numero)
     {
         // Verificar que el índice esté dentro del rango del arreglo
         if (numero < 0 || numero >= imagenes.Length)
@@ -66,8 +65,8 @@ public class Fotografias : MonoBehaviour
     public void settear_imagen()
     {
         Debug.Log("se esta enviando el dato");
-        GameManager.gameManager.setImagen(num_seleccion);
-        GameManager.gameManager.setQuadricula(1);
+        GameManager.gameManager.SetImagen(num_seleccion);
+        GameManager.gameManager.SetCuadricula(1);
         Debug.Log("se ha seteado");
     }
 }

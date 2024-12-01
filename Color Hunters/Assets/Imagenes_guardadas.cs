@@ -65,7 +65,7 @@ public class Imagenes_guardadas : MonoBehaviour
     private void Awake()
     {
        
-        changeImage(GameManager.gameManager.getImagen());
+        changeImage(GameManager.gameManager.GetImagen());
        
     }
 
@@ -141,7 +141,7 @@ public class Imagenes_guardadas : MonoBehaviour
 
     public void enviar_respuesta(int quadricula)
     {
-        int numeroArray=GameManager.gameManager.getImagen();
+        int numeroArray=GameManager.gameManager.GetImagen();
        
 
         switch (numeroArray)
@@ -154,10 +154,10 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     
                     GameManager.gameManager.cont1++;
-                    Debug.Log(GameManager.gameManager.getImagen_imagen_guadricula());
+                    Debug.Log(GameManager.gameManager.GetImagenCuadricula());
 
                 }
                 break;
@@ -169,7 +169,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     GameManager.gameManager.cont2++;
                 }
                 break;
@@ -181,7 +181,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     GameManager.gameManager.cont3++;
                 }
                 break;
@@ -193,7 +193,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     GameManager.gameManager.cont4++;
                 }
                 break;
@@ -205,7 +205,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     GameManager.gameManager.cont5++;
                 }
                 break;
@@ -217,7 +217,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     GameManager.gameManager.cont6++;
                 }
                 break;
@@ -229,7 +229,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     GameManager.gameManager.cont7++;
                 }
                 break;
@@ -241,7 +241,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 else
                 {
-                    GameManager.gameManager.setQuadricula(GameManager.gameManager.getImagen_imagen_guadricula() + 1);
+                    GameManager.gameManager.SetCuadricula(GameManager.gameManager.GetImagenCuadricula() + 1);
                     GameManager.gameManager.cont8++;
                 }
                 break;
@@ -258,7 +258,7 @@ public class Imagenes_guardadas : MonoBehaviour
         {
             case 0:
                 
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         //Debug.Log("se ha impreso el punto de foco");
@@ -269,7 +269,7 @@ public class Imagenes_guardadas : MonoBehaviour
                         punto.sprite = imagen_1_2;
                         break;
                     case 3:
-                        //Debug.Log("se ha impreso el punto de focoo");
+                        //Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_3;
                         break;
                     case 4:
@@ -284,7 +284,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 break;
             case 1:
                 
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         //Debug.Log("se ha impreso el punto de foco");
@@ -295,22 +295,22 @@ public class Imagenes_guardadas : MonoBehaviour
                         punto.sprite = imagen_2_2;
                         break;
                     case 3:
-                        //Debug.Log("se ha impreso el punto de focoo");
+                        //Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_3;
                         break;
                     case 4:
-                       // Debug.Log("se ha impreso el punto de foco");
+                        //Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_4;
                         break;
                     case 5:
-                      //  Debug.Log("se ha impreso el punto de foco");
+                        //Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_5;
                         break;
                 }
                 break;
             case 2:
               
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         Debug.Log("se ha impreso el punto de foco");
@@ -336,7 +336,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 break;
             case 3:
                
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         Debug.Log("se ha impreso el punto de foco");
@@ -362,7 +362,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 break;
             case 4:
                
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         Debug.Log("se ha impreso el punto de foco");
@@ -388,7 +388,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 break;
             case 5:
                 
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         Debug.Log("se ha impreso el punto de foco");
@@ -414,7 +414,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 break;
             case 6:
                
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         Debug.Log("se ha impreso el punto de foco");
@@ -440,7 +440,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 break;
             case 7:
                 
-                switch (GameManager.gameManager.getImagen_imagen_guadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         Debug.Log("se ha impreso el punto de foco");
@@ -466,9 +466,4 @@ public class Imagenes_guardadas : MonoBehaviour
                 break;
         }
     }
-
-    // Update is called once per frame
-   
-
-
 }
