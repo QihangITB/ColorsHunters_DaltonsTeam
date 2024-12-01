@@ -34,11 +34,11 @@ public class FormManager : MonoBehaviour
     /// <param name="input">Campo de entrada donde el usuario introduce su documento de identidad.</param>
     public void Login(TMP_InputField input)
     {
-        if (_dbManager.IsClientExist(input.text))
+        if (_dbManager.IsCustomerExist(input.text))
         {
             SaveCustomerData();
 
-            // Indice 2 es la escena del libro magico
+            // Indice 2 es la siguiente escena
             _cambiadorEscenas.GoToScene(2);
         }
         else
@@ -65,9 +65,9 @@ public class FormManager : MonoBehaviour
     public void Register()
     {
         SaveCustomerData();
-        _dbManager.AddNewClient();
+        _dbManager.AddNewCustomer();
 
-        // Indice 2 es la escena del libro magico
+        // Indice 2 es la siguiente escena
         _cambiadorEscenas.GoToScene(2);
     }
 

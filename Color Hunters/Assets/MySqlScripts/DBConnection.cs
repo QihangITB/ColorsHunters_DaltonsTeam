@@ -4,6 +4,7 @@ using MySqlConnector;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using Unity.VisualScripting;
 
 public class DBConnection
 {
@@ -72,7 +73,7 @@ public class DBConnection
     /// <param name="email">Correo electrónico del cliente.</param>
     /// <param name="address">Dirección del cliente.</param>
     /// <param name="doctor">ID del oftalmólogo asociado.</param>
-    public void InsertClient(string id, string name, string surnames, string age, string phone, string email, string address, int doctor)
+    public void InsertCustomer(string id, string name, string surnames, string age, string phone, string email, string address, int doctor)
     {
         string query = "INSERT INTO clientes (documento_identidad, nombre, apellidos, edad, telefono, correo, direccion, id_oftalmologo) " +
             "VALUES (@id, @name, @surnames, @age, @phone, @email, @address, @doctor)";
@@ -107,11 +108,11 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Obtiene el ID de un cliente a partir de su documento de identidad.
+    /// Obtiene el ID de un cliente de la base de datos a partir de su documento de identidad.
     /// </summary>
     /// <param name="documentId">Documento de identidad del cliente.</param>
     /// <returns>El ID del cliente. Devuelve 0 si no se encuentra el cliente.</returns>
-    public int GetClientIdByDocumentId(string documentId)
+    public int GetCustomerIdByDocumentId(string documentId)
     {
         int result = 0;
         string query = "SELECT id_cliente FROM clientes WHERE documento_identidad = @documentId";
@@ -138,7 +139,7 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Obtiene el ID del oftalmologo a partir de su documento de identidad.
+    /// Obtiene el ID del oftalmologo de la base de datos a partir de su documento de identidad.
     /// </summary>
     /// <param name="documentId">Documento de identidad del oftalmologo.</param>
     /// <returns>El ID del oftalmologo. Devuelve 0 si no se encuentra el oftalmologo.</returns>
@@ -210,5 +211,38 @@ public class DBConnection
             Debug.LogError("Error inesperado: " + ex.Message);
         }
         return ophthalmologistList;
+    }
+
+    /// <summary>
+    /// Inserta un nuevo resultado del cliente a la base de datos.
+    /// </summary>
+    /// <param name="customerId">Id de la base de datos del cliente.</param>
+    /// <param name="resultMessage">El resultado que se le muestra al cliente</param>
+    public void InsertResult(int customerId, string resultMessage)
+    {
+        string query = "INSERT INTO resultados (id_cliente, resultado_prueba, fecha) VALUES (@idCliente, @resultadoPrueba, @fecha);";
+
+        try
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@idCliente", customerId);
+                    command.Parameters.AddWithValue("@resultadoPrueba", resultMessage);
+                    command.Parameters.AddWithValue("@fecha", DateTime.Now);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    Debug.Log($"Filas insertadas: {rowsAffected}");
+                }
+                conn.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error al insertar datos: {ex.Message}");
+        }
     }
 }

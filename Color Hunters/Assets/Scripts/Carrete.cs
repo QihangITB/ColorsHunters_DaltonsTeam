@@ -22,7 +22,7 @@ public class Carrete : MonoBehaviour
 
     public void rellenar()
     {
-        int nuevaImagen = GameManager.gameManager.getImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
+        int nuevaImagen = GameManager.gameManager.GetImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
 
         // Verificar si la imagen ya está en las posiciones
         bool imagenExistente = GameManager.gameManager.posiciones.Contains(nuevaImagen);

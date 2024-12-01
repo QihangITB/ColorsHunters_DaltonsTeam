@@ -66,8 +66,8 @@ public class Fotografias : MonoBehaviour
     public void settear_imagen()
     {  // se envia el dato a la camara
         Debug.Log("se esta enviando el dato");
-        GameManager.gameManager.setImagen(num_seleccion); 
-        GameManager.gameManager.setCuadricula(1);
+        GameManager.gameManager.SetImagen(num_seleccion); 
+        GameManager.gameManager.SetCuadricula(1);
         Debug.Log("se ha seteado");
     }
 }
