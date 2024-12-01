@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class Imagenes_guardadas : MonoBehaviour
 {
-
     // Nuestra base de datos tocha en e programa con las imagenes
     public Sprite imagen_1;
     public Sprite imagen_2;
@@ -72,7 +71,7 @@ public class Imagenes_guardadas : MonoBehaviour
 
     public void changeImage(int numeroArray)
     {
-        GameManager.gameManager.setQuadricula(1); // se setea en 0% de contraste cada vez que el usuario abre imagen
+        GameManager.gameManager.SetCuadricula(1); // se setea en 0% de contraste cada vez que el usuario abre imagen
         Image image = Captura.GetComponent<Image>();
        
         Debug.Log(numeroArray);
@@ -148,7 +147,6 @@ public class Imagenes_guardadas : MonoBehaviour
         switch (numeroArray)
         {
             case 0:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)  // este es el if que se tiene que ajustar a cada imagen para saber donde el objeto de la pista
                 {
                     GameManager.gameManager.respuesta1 = true; // setea el boolean pertinente en true
@@ -170,7 +168,6 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 1:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta2 = true;
@@ -191,7 +188,6 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 2:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta3 = true;
@@ -212,7 +208,6 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 3:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta4 = true;
@@ -233,7 +228,6 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 4:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta5 = true;
@@ -254,7 +248,6 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 5:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta6 = true;
@@ -275,7 +268,6 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 6:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta7 = true;
@@ -296,7 +288,6 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 7:
-                Debug.Log("se ha impreso la foto");
                 if (quadricula == 8)
                 {
                     GameManager.gameManager.respuesta8 = true;
@@ -332,23 +323,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_5;
                         break;
                 }
@@ -358,23 +344,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_2_5;
                         break;
                 }
@@ -384,23 +365,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_3_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_3_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_3_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_3_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_3_5;
                         break;
                 }
@@ -410,23 +386,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_4_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_4_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_4_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_4_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_4_5;
                         break;
                 }
@@ -436,23 +407,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_5_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_5_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_5_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_5_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_5_5;
                         break;
                 }
@@ -462,23 +428,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_6_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_6_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_6_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_6_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_6_5;
                         break;
                 }
@@ -488,23 +449,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_7_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_7_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_7_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_7_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_7_5;
                         break;
                 }
@@ -514,23 +470,18 @@ public class Imagenes_guardadas : MonoBehaviour
                 switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_1_1;
                         break;
                     case 2:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_8_2;
                         break;
                     case 3:
-                        Debug.Log("se ha impreso el punto de focoo");
                         punto.sprite = imagen_8_3;
                         break;
                     case 4:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_8_4;
                         break;
                     case 5:
-                        Debug.Log("se ha impreso el punto de foco");
                         punto.sprite = imagen_8_5;
                         break;
                 }

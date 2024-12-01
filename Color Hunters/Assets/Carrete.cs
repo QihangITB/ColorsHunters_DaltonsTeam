@@ -21,11 +21,9 @@ public class Carrete : MonoBehaviour
     }
 
     public void Rellenar()
-    {
-        int nuevaImagen = GameManager.gameManager.GetImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
-        
+    {        
         // Verificar si la imagen ya est� en las posiciones
-        int nuevaImagen = GameManager.gameManager.getImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
+        int nuevaImagen = GameManager.gameManager.GetImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
 
         // Verificar si la imagen ya est� en las posiciones
         bool imagenExistente = GameManager.gameManager.posiciones.Contains(nuevaImagen);
@@ -38,7 +36,7 @@ public class Carrete : MonoBehaviour
         {
             // Solo agregamos nuevas entradas si la imagen no est� en las posiciones
             Debug.Log("Int nuevaImagen: " + nuevaImagen);//imprimimos para las pruebas
-            GameManager.gameManager.carrete.Add(seleccion(nuevaImagen));// de nuestra array seleccionamos el nombre que le corresponde mediante la funcion selection que etsa mas abajo
+            GameManager.gameManager.carrete.Add(Seleccion(nuevaImagen));// de nuestra array seleccionamos el nombre que le corresponde mediante la funcion selection que etsa mas abajo
             GameManager.gameManager.posiciones.Add(nuevaImagen);// a�adimos al carrete
 
             // Asegurar el tama�o m�ximo del carrete
@@ -85,7 +83,7 @@ public class Carrete : MonoBehaviour
 
     public string Seleccion(int numeroArray)
     {
-         // seleccionamos el string correspondiente y lo devolvemos
+        // seleccionamos el string correspondiente y lo devolvemos
         return imagene_1[numeroArray];
     }
 }

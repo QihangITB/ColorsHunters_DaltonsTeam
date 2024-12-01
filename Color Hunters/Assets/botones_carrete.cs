@@ -13,6 +13,4 @@ public class botones_carrete : MonoBehaviour
         guardadas.changeImage(GameManager.gameManager.posiciones[posicion]);
         GameManager.gameManager.SetImagen(GameManager.gameManager.posiciones[posicion]);
     }
-
-
 }

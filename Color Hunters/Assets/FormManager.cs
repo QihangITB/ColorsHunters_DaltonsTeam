@@ -85,14 +85,14 @@ public class FormManager : MonoBehaviour
     /// <param name="options">Lista de nombres y apellidos de los oftalmologos.</param>
     private void AddOptionsToDropdown(List<string> options)
     {
-        // Cogemos el dropdown del _dbmanager para facilitar evitar crear m�s variables
+        // Cogemos el dropdown del _dbmanager para facilitar evitar crear mas variables
         _dbManager.doctorDropdown.ClearOptions(); // Limpiar las opciones actuales
 
         List<TMP_Dropdown.OptionData> dropdownOptions = new List<TMP_Dropdown.OptionData>();
 
         foreach (string option in options)
         {
-            dropdownOptions.Add(new TMP_Dropdown.OptionData(option)); // Crear una opci�n con el texto
+            dropdownOptions.Add(new TMP_Dropdown.OptionData(option)); // Crear una opcion con el texto
         }
 
         _dbManager.doctorDropdown.AddOptions(dropdownOptions);
