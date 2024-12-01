@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Backgrounds
   - Water
   - UI
-  - filtro
+  - Filtro
   - PuntoFocal
-  - ImaenBase
+  - ImagenBase
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Backgrounds
+    uniqueID: 1119646535
+    locked: 0
+  - name: Filtro
+    uniqueID: 3531421121
+    locked: 0
+  - name: PuntoFocal
+    uniqueID: 2698587205
+    locked: 0
+  - name: ImagenBase
+    uniqueID: 1809323539
+    locked: 0
+  - name: UI
+    uniqueID: 4007243897
     locked: 0
