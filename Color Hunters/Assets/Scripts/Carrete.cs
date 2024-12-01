@@ -24,6 +24,11 @@ public class Carrete : MonoBehaviour
     {
         int nuevaImagen = GameManager.gameManager.GetImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
 
+        if(nuevaImagen == -1)
+        {
+            return;
+        }
+
         // Verificar si la imagen ya está en las posiciones
         bool imagenExistente = GameManager.gameManager.posiciones.Contains(nuevaImagen);
 
@@ -57,7 +62,6 @@ public class Carrete : MonoBehaviour
         {
             if (i >= transform.childCount) break;
 
-
             // como este script esta en el abuelo del componente textmeshpro pues hacemos todo esto para pillar el componente
             Transform currentChild = transform.GetChild(i);
             Transform grandchild = currentChild.GetChild(0);
@@ -71,7 +75,7 @@ public class Carrete : MonoBehaviour
 
             if (i >= GameManager.gameManager.carrete.Count)
             {
-                tmpComponent.text = "Empty";// rellenar campos vacios con empty que queda mejor
+                tmpComponent.text = "...";// rellenar campos vacios con '...' que queda mejor
             }
             else
             {

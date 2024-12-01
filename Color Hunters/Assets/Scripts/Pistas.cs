@@ -35,6 +35,7 @@ public class Pistas : MonoBehaviour
 
         // Obtener la pista correspondiente
         string pista = pistas[numero];
+        Debug.Log("LA pista es " + pista);
 
         // Buscar el Text hijo del botón que llamó esta función
         pistaGO.SetActive(true);
