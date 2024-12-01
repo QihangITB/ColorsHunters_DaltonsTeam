@@ -38,9 +38,9 @@ public class DBManager : MonoBehaviour
     /// <summary>
     /// Agrega un nuevo cliente a la base de datos usando la informacion proporcionada en los campos de entrada.
     /// </summary>
-    public void AddNewClient()
+    public void AddNewCustomer()
     {
-        database.InsertClient(
+        database.InsertCustomer(
                 idInput.text,
                 nameInput.text,
                 surnamesInput.text,
