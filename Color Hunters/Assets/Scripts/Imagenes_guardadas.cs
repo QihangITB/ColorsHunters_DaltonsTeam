@@ -139,10 +139,10 @@ public class Imagenes_guardadas : MonoBehaviour
                 ControladorRespuesta(quadricula, numeroArray, 5);
                 break;
             case 2:
-                ControladorRespuesta(quadricula, numeroArray, 9);
+                ControladorRespuesta(quadricula, numeroArray, 3);
                 break;
             case 3:
-                ControladorRespuesta(quadricula, numeroArray, 2);
+                ControladorRespuesta(quadricula, numeroArray, 8);
                 break;
             case 4:
                 ControladorRespuesta(quadricula, numeroArray, 4);
@@ -151,10 +151,10 @@ public class Imagenes_guardadas : MonoBehaviour
                 ControladorRespuesta(quadricula, numeroArray, 5);
                 break;
             case 6:
-                ControladorRespuesta(quadricula, numeroArray, 5);
+                ControladorRespuesta(quadricula, numeroArray, 4);
                 break;
             case 7:
-                ControladorRespuesta(quadricula, numeroArray, 4);
+                ControladorRespuesta(quadricula, numeroArray, 5);
                 break;
         }
         settear_punto(numeroArray);

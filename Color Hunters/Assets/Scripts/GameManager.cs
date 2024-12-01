@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,14 +19,14 @@ public class GameManager : MonoBehaviour
     public bool respuesta7 { get; set; } = false;
     public bool respuesta8 { get; set; } = false;
 
-    public int cont1 { get; set; } = 1;
-    public int cont2 { get; set; } = 1;
-    public int cont3 { get; set; } = 1;
-    public int cont4 { get; set; } = 1; // contadores para saber hasta que grado de contraste a subido
-    public int cont5 { get; set; } = 1;
-    public int cont6 { get; set; } = 1;
-    public int cont7 { get; set; } = 1;
-    public int cont8 { get; set; } = 1;
+    public int cont1 { get; set; } = 0;
+    public int cont2 { get; set; } = 0;
+    public int cont3 { get; set; } = 0;
+    public int cont4 { get; set; } = 0; // contadores para saber hasta que grado de contraste a subido
+    public int cont5 { get; set; } = 0;
+    public int cont6 { get; set; } = 0;
+    public int cont7 { get; set; } = 0;
+    public int cont8 { get; set; } = 0;
 
     public List<string> carrete = new List<string>(); // para no pderder el carrete con los cambios de escena
 
@@ -46,7 +48,8 @@ public class GameManager : MonoBehaviour
             // No destruir este objeto al cargar una nueva escena
             // Inicializa el stack
         }
-    }   
+    }  
+    
     // cambias las escenas
     public void ChangeScene(int sceneIndex)
     {
@@ -89,19 +92,44 @@ public class GameManager : MonoBehaviour
     {
         DBConnection db = new DBConnection();
 
-        string result = ShowTestResult();
+        string result = $"{CalcularResultados()}%";
         int customerDatabaseId = db.GetCustomerIdByDocumentId(player.Id); // Con el documento de identidad obtenemos el id de la base de datos
 
         db.InsertResult(customerDatabaseId, result);
     }
 
-    private string ShowTestResult()
-    {
-        return $"Resultados del cliente {player.Name} {player.Surnames} es: ........................";
-    }
-
     private float CalcularResultados()
     {
-        return 0.1f;
+        float resultado = 0;
+        int[] listaContadores = { cont1, cont2, cont3, cont4, cont5, cont6, cont7, cont8 };
+
+        for(int i = 0; i < listaContadores.Length; i++)
+        {
+            resultado = listaContadores[i] <= 5 ? resultado + listaContadores[i] * 2.5f : resultado + 12.5f;
+        }
+
+        return resultado;
+    }
+
+    public string MostrarResultado()
+    {
+        string resultado = "";
+
+        if (CalcularResultados() <= 10f)
+        {
+            resultado = "Tiene una probabilidad nula de daltonismo";
+        }
+        else if (CalcularResultados() <= 40f)
+        {
+            resultado = "Tiene una probabilidad baja de daltonismo";
+        }
+        else if (CalcularResultados() <= 80f)
+        {
+            resultado = "Tiene una probabilidad intermedia de daltonismo";
+        } else if (CalcularResultados() <= 100f)
+        {
+            resultado = "Tiene una probabilidad alta de daltonismo";
+        }
+        return resultado;
     }
 }
