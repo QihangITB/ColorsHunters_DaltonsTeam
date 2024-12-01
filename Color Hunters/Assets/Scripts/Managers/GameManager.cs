@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public List<int> posiciones = new List<int>(); // same pero con las posiciones
 
-    public Customer player; // ni puta idea que es esto, creo que lo ha hecho Qihang
+    public Customer player; // variable donde guarda los datos del jugador
 
     private void Awake()
     {
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
     // si el jugador a completado el juego
-    public bool alltrue()
+    public bool AllTrue()
     {
         if (respuesta1 && respuesta2 && respuesta3 && respuesta4 && respuesta5 && respuesta6 && respuesta7 && respuesta8)
         {
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         else { return false; }  
     }
 
-    public void setImagen(int index)
+    public void SetImagen(int index)
     {
         imagen_completa = index;
     }
@@ -75,9 +75,25 @@ public class GameManager : MonoBehaviour
     public int getImagen() { return imagen_completa; } // para poder agarrar la imagen, se que no es necesario pero vengo de java y tengo la mania y lo he usado en mucho codigo asi que usemos esto xd
     public int getImagen_imagen_quadricula() { return imagen_contraste; }
 
-    // tiene pinta de ser de la base de datos
+
+    // Assigna los datos del cliente a la instancia del GameManager
     public void SetPlayerData(Customer inputsData)
     {
         this.player = inputsData;
+    }
+
+    public void SendResultToDB()
+    {
+        DBConnection db = new DBConnection();
+
+        string result = ShowTestResult();
+        int customerDatabaseId = db.GetCustomerIdByDocumentId(player.Id); // Con el documento de identidad obtenemos el id de la base de datos
+
+        db.InsertResult(customerDatabaseId, result);
+    }
+
+    private string ShowTestResult()
+    {
+        return $"Resultados del cliente {player.Name} {player.Surnames} es: ........................";
     }
 }

@@ -292,6 +292,35 @@ public class Imagenes_guardadas : MonoBehaviour
         settear_punto(numeroArray);
     }
 
+    private void ControladorRespuesta(int quadricula, int imageIndex)
+    {
+        if (quadricula == 5) // If the selected grid matches the expected answer
+        {
+            // Dynamically set the appropriate response boolean using reflection
+            typeof(GameManager).GetProperty($"respuesta{imageIndex + 1}").SetValue(GameManager.gameManager, true);
+
+            Debug.Log($"Response for image {imageIndex + 1}: " +
+                      typeof(GameManager).GetProperty($"respuesta{imageIndex + 1}").GetValue(GameManager.gameManager));
+        }
+        else
+        {
+            int currentQuadricula = GameManager.gameManager.getImagen_imagen_quadricula();
+
+            if (currentQuadricula == 5)
+            {
+                Debug.Log("MAXIMO CONTRASTE ALCANZADO");
+            }
+            else
+            {
+                GameManager.gameManager.setCuadricula(currentQuadricula + 1);
+                typeof(GameManager).GetProperty($"cont{imageIndex + 1}").SetValue(GameManager.gameManager,
+                    (int)typeof(GameManager).GetProperty($"cont{imageIndex + 1}").GetValue(GameManager.gameManager) + 1);
+
+                Debug.Log($"Cuadricula for image {imageIndex + 1} incremented to {GameManager.gameManager.getImagen_imagen_quadricula()}");
+            }
+        }
+    }
+
     void settear_punto(int numeroArray)
     {
         Image punto = punto_focal.GetComponent<Image>(); // agarra componente de imagen del punto de fuga

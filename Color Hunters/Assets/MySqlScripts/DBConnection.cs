@@ -108,11 +108,11 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Obtiene el ID de un cliente a partir de su documento de identidad.
+    /// Obtiene el ID de un cliente de la base de datos a partir de su documento de identidad.
     /// </summary>
     /// <param name="documentId">Documento de identidad del cliente.</param>
     /// <returns>El ID del cliente. Devuelve 0 si no se encuentra el cliente.</returns>
-    public int GetClientIdByDocumentId(string documentId)
+    public int GetCustomerIdByDocumentId(string documentId)
     {
         int result = 0;
         string query = "SELECT id_cliente FROM clientes WHERE documento_identidad = @documentId";
@@ -139,7 +139,7 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Obtiene el ID del oftalmologo a partir de su documento de identidad.
+    /// Obtiene el ID del oftalmologo de la base de datos a partir de su documento de identidad.
     /// </summary>
     /// <param name="documentId">Documento de identidad del oftalmologo.</param>
     /// <returns>El ID del oftalmologo. Devuelve 0 si no se encuentra el oftalmologo.</returns>
@@ -218,7 +218,7 @@ public class DBConnection
     /// </summary>
     /// <param name="customerId">Id de la base de datos del cliente.</param>
     /// <param name="resultMessage">El resultado que se le muestra al cliente</param>
-    public void InsertResult(string customerId, string resultMessage)
+    public void InsertResult(int customerId, string resultMessage)
     {
         string query = "INSERT INTO resultados (id_cliente, resultado_prueba, fecha) VALUES (@idCliente, @resultadoPrueba, @fecha);";
 

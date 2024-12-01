@@ -29,10 +29,10 @@ public class DBManager : MonoBehaviour
     /// </summary>
     /// <param name="documentId">El documento de identidad del cliente.</param>
     /// <returns>Devuelve `true` si el cliente existe, `false` si no.</returns>
-    public bool IsClientExist(string documentId)
+    public bool IsCustomerExist(string documentId)
     {
         int notFound = 0;
-        return (database.GetClientIdByDocumentId(documentId) != notFound);
+        return (database.GetCustomerIdByDocumentId(documentId) != notFound);
     }
 
     /// <summary>
