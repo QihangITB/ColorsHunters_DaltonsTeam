@@ -10,7 +10,6 @@ public class Doctor
     public string Phone { set; get; }
     public string Email { set; get; }
 
-
     public Doctor(string id, string name, string surnames, string phone, string email)
     {
         Id = id;
@@ -21,6 +20,4 @@ public class Doctor
     }
 
     public Doctor() : this("", "", "", "", "") { }
-
-
 }
