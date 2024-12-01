@@ -70,6 +70,7 @@ public class Imagenes_guardadas : MonoBehaviour
         
     private void Awake()
     {
+        Debug.Log("IMAGEN " + GameManager.gameManager.GetImagen());
         changeImage(GameManager.gameManager.GetImagen()); // llama nada mas despertar la funcion para asociar imagen
     }
 

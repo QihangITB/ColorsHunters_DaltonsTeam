@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1659993652453061782, guid: 3f0a29d49586a7442a631be616fb4c47, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Empezar
       objectReference: {fileID: 0}
     - target: {fileID: 5599751901179849805, guid: 3f0a29d49586a7442a631be616fb4c47, type: 3}
       propertyPath: m_Pivot.x
@@ -582,7 +582,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bienvenido a la aventura de Color Hunters. Tu misi\xF3n es rellenar un
     \xE1lbum de fotos escogiendo entre las opciones que ir\xE1s encontrando por el
-    camino. Piensa bien tu elecci\xF3n... \xA1Disfruta la experi\xE8ncia!"
+    camino. Piensa bien tu elecci\xF3n... \xA1Disfruta la experi\xE9ncia!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

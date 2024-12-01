@@ -14,13 +14,13 @@ public class Carrete : MonoBehaviour
     // en el awake carga el nombre de las imagenes, cambiar al gusto.
     private void Awake()
     {
-        imagene_1 = new string[9] { "flores", "Castillo", "sumama", "alicante", "picante", "imagen_1_6", "imagen_1_7", "imagen_1_8", "imagen_1_9" };
+        imagene_1 = new string[8] { "Banderas", "Bosque", "Estocolmo", "Flores", "Golondrina", "Manzano", "Peces", "Pueblo" };
        // Debug.Log("Estado del carrete en el GameManager antes de llamar a rellenar(): " + string.Join(", ", GameManager.gameManager.carrete));
-        rellenar(); // se llama a la funcion de rellenar
+        Rellenar(); // se llama a la funcion de rellenar
 
     }
 
-    public void rellenar()
+    public void Rellenar()
     {
         int nuevaImagen = GameManager.gameManager.GetImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
 
