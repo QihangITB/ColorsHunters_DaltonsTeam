@@ -6,13 +6,13 @@ using TMPro;
 
 public class comprobante_de_respuesta : MonoBehaviour
 {
-    
     public int respuesta;
+    private GameObject ranura;
     // se encarga de comprobar si las resoluciones estan hechas y muestra imagen
     void Awake()
     {
+        ranura = transform.GetChild(0).gameObject;
         Image resu_imagen = gameObject.GetComponent<Image>(); // componente imagen 
-        TextMeshProUGUI texto = transform.GetChild(0).GetComponent<TextMeshProUGUI>(); // componente del texto
         Debug.Log(GameManager.gameManager.respuesta1); // comprobacion si estaba funcionando bien
         switch (respuesta)
         {
@@ -23,7 +23,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta1 == true)
                 {
                     resu_imagen.enabled=true; // por si no lo sabiais como me ha pasado a mi, la mayoria de componentes se les quita su funcion asi en vez de con el setActive
-                    texto.enabled=false;
+                    ranura.SetActive(false); // desactiva la ranura para que no se pueda volver a meter la respuesta
                 }
                 break;
             case 2:
@@ -31,7 +31,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta2 == true)
                 {
                     resu_imagen.enabled = true;
-                    texto.enabled = false;
+                    ranura.SetActive(false);
                 }
                 break;
             case 3:
@@ -39,7 +39,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta3 == true)
                 {
                     resu_imagen.enabled = true;
-                    texto.enabled = false;
+                    ranura.SetActive(false);
                 }
                 break;
             case 4:
@@ -47,7 +47,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta4 == true)
                 {
                     resu_imagen.enabled = true;
-                    texto.enabled = false;
+                    ranura.SetActive(false);
                 }
                 break;
             case 5:
@@ -55,7 +55,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta5 == true)
                 {
                     resu_imagen.enabled = true;
-                    texto.enabled = false;
+                    ranura.SetActive(false);
                 }
                 break;
             case 6:
@@ -63,7 +63,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta6 == true)
                 {
                     resu_imagen.enabled = true;
-                    texto.enabled = false;
+                    ranura.SetActive(false);
                 }
                 break;
             case 7:
@@ -71,7 +71,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta7 == true)
                 {
                     resu_imagen.enabled = true;
-                    texto.enabled = false;
+                    ranura.SetActive(false);
                 }
                 break;
             case 8:
@@ -79,7 +79,7 @@ public class comprobante_de_respuesta : MonoBehaviour
                 if (GameManager.gameManager.respuesta8 == true)
                 {
                     resu_imagen.enabled = true;
-                    texto.enabled = false;
+                    ranura.SetActive(false);
                 }
                 break;
         }

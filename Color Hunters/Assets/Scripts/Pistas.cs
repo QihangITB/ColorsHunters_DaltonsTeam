@@ -7,14 +7,14 @@ using TMPro;
 public class Pistas : MonoBehaviour
 {
     // las pistas que se ponen en cada apartado, ponendalas aqui y se rellenara solo
-    string pista1_1 = "pista1";
-    string pista1_2 = "pista2";
-    string pista1_3 = "pista3";
-    string pista1_4 = "pista4";
-    string pista1_5 = "pista5";
-    string pista1_6 = "pista6";
-    string pista1_7 = "pista7";
-    string pista1_8 = "pista8";
+    string pista1_1 = "Encuentra el castillo con bandera roja";
+    string pista1_2 = "Encuentra el arbol de otra estación";
+    string pista1_3 = "Encuentra la zona de la ciudad con el filtro rojo";
+    string pista1_4 = "Encuentra la flor del Sant Jordi";
+    string pista1_5 = "Encuentra el ave";
+    string pista1_6 = "Encuentra las manzanas no maduras";
+    string pista1_7 = "Encuentra al primo de Nemo";
+    string pista1_8 = "Encuentra las paredes con musgo en el pueblo";
     string[] pistas;
     public GameObject pistaGO;
 
@@ -35,6 +35,7 @@ public class Pistas : MonoBehaviour
 
         // Obtener la pista correspondiente
         string pista = pistas[numero];
+        Debug.Log("La pista es " + pista);
 
         // Buscar el Text hijo del botón que llamó esta función
         pistaGO.SetActive(true);

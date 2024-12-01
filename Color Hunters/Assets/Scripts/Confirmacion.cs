@@ -10,7 +10,12 @@ public class Confirmacion : MonoBehaviour
         // comprueba que todo este bien y entonces te envia a la sala de los datos, el numero es temporal, cambiar a gusto
         if (GameManager.gameManager.AllTrue())
         {
-            GameManager.gameManager.ChangeScene(5);
+            GameManager.gameManager.SendResultToDB(); // envia los resultados a la base de datos
+            GameManager.gameManager.ChangeScene(6);
+        }
+        else
+        {
+            //RUIDO
         }
     }
 }

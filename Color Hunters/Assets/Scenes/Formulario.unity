@@ -3104,7 +3104,7 @@ PrefabInstance:
     - target: {fileID: 250360883420600057, guid: 3f0a29d49586a7442a631be616fb4c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1992904676}
+      objectReference: {fileID: 1992904680}
     - target: {fileID: 250360883420600057, guid: 3f0a29d49586a7442a631be616fb4c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3278,7 +3278,7 @@ PrefabInstance:
     - target: {fileID: 250360883420600057, guid: 3f0a29d49586a7442a631be616fb4c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1992904676}
+      objectReference: {fileID: 1992904680}
     - target: {fileID: 250360883420600057, guid: 3f0a29d49586a7442a631be616fb4c47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -6208,7 +6208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992904677}
   - component: {fileID: 1992904678}
-  - component: {fileID: 1992904676}
+  - component: {fileID: 1992904680}
   - component: {fileID: 1992904679}
   m_Layer: 0
   m_Name: FormSceneManager
@@ -6217,20 +6217,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1992904676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992904675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d04c0c3a4c1c55d4cba1b80c616a7241, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoginGroup: {fileID: 1336542572}
-  RegisterGroup: {fileID: 665283101}
 --- !u!4 &1992904677
 Transform:
   m_ObjectHideFlags: 0
@@ -6278,6 +6264,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf8478074c2db14eb5851d2563efa41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1992904680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992904675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e7588c9eff2384d92baa8ac440e00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoginGroup: {fileID: 1336542572}
+  RegisterGroup: {fileID: 665283101}
 --- !u!1 &1999747503
 GameObject:
   m_ObjectHideFlags: 0

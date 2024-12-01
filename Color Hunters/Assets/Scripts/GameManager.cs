@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager; // declaracion statica
     private int imagen_contraste; // tipo de contraste
-    private int imagen_completa; // id de imagen que se esta utilizando
+    private int? imagen_completa; // id de imagen que se esta utilizando
     public bool respuesta1 { get; set; } = false; 
     public bool respuesta2 { get; set; } = false;
     public bool respuesta3 { get; set; } = false;
@@ -72,7 +72,10 @@ public class GameManager : MonoBehaviour
         imagen_contraste = cuadricula;
     }
 
-    public int GetImagen() { return imagen_completa; } // para poder agarrar la imagen, se que no es necesario pero vengo de java y tengo la mania y lo he usado en mucho codigo asi que usemos esto xd
+    public int GetImagen() 
+    {
+        return imagen_completa == null ? -1 : (int)imagen_completa;
+    } // para poder agarrar la imagen, se que no es necesario pero vengo de java y tengo la mania y lo he usado en mucho codigo asi que usemos esto xd
     public int GetImagenCuadricula() { return imagen_contraste; }
 
 
@@ -95,5 +98,10 @@ public class GameManager : MonoBehaviour
     private string ShowTestResult()
     {
         return $"Resultados del cliente {player.Name} {player.Surnames} es: ........................";
+    }
+
+    private float CalcularResultados()
+    {
+        return 0.1f;
     }
 }
