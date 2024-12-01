@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Fotografias : MonoBehaviour
 {
+    // imagenes generales del mapa mundial
     public Sprite imagen1;
     public Sprite imagen2;
     public Sprite imagen3;
@@ -18,20 +19,20 @@ public class Fotografias : MonoBehaviour
     int num_seleccion;
 
     Sprite[] imagenes;
-    public GameObject pistaGO;
+    public GameObject pistaGO; // campo donde en su componente imagen pondremos las imagenes
 
     private void Awake()
     {
-        imagenes = new Sprite[8] { imagen1,imagen2,imagen3,imagen4,imagen5,imagen6,imagen7,imagen8 };
+        imagenes = new Sprite[8] { imagen1,imagen2,imagen3,imagen4,imagen5,imagen6,imagen7,imagen8 }; // cargamos las imagenes
     }
 
 
-    public void poner_imagen(int numero)
+    public void  poner_imagen(int numero)
     {
-        // Verificar que el índice esté dentro del rango del arreglo
+        // Verificar que el ï¿½ndice estï¿½ dentro del rango del arreglo
         if (numero < 0 || numero >= imagenes.Length)
         {
-            Debug.LogError("Número fuera de rango");
+            Debug.LogError("Nï¿½mero fuera de rango");
             return;
         }
 
@@ -39,7 +40,7 @@ public class Fotografias : MonoBehaviour
         // Obtener la pista correspondiente
         Sprite imagen = imagenes[numero];
         num_seleccion = numero;
-        // Buscar el Text hijo del botón que llamó esta función
+        // Buscar el Text hijo del botï¿½n que llamï¿½ esta funciï¿½n
         pistaGO.SetActive(true);
 
         if (pistaGO != null)
@@ -58,12 +59,12 @@ public class Fotografias : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se encontró el GameObject llamado 'Pista'.");
+            Debug.LogError("No se encontrï¿½ el GameObject llamado 'Pista'.");
         }
     }
 
     public void settear_imagen()
-    {
+    {  // se envia el dato a la camara
         Debug.Log("se esta enviando el dato");
         GameManager.gameManager.SetImagen(num_seleccion);
         GameManager.gameManager.SetCuadricula(1);

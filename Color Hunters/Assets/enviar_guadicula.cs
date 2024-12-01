@@ -5,7 +5,7 @@ using UnityEngine;
 public class enviar_guadricula : MonoBehaviour
 {
     
-    
+     // envia la posicion a la camara
      public void enviar_posicion(int posicion)
     {
 

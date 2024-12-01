@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 397321039}
   - component: {fileID: 397321038}
   - component: {fileID: 397321037}
+  - component: {fileID: 397321040}
   m_Layer: 5
   m_Name: Pista_3
   m_TagString: Untagged
@@ -398,6 +399,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397321035}
   m_CullTransparentMesh: 1
+--- !u!114 &397321040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397321035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respuesta: 3
 --- !u!1 &402256644
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +647,7 @@ GameObject:
   - component: {fileID: 566196852}
   - component: {fileID: 566196851}
   - component: {fileID: 566196850}
+  - component: {fileID: 566196853}
   m_Layer: 5
   m_Name: Pista_6
   m_TagString: Untagged
@@ -736,8 +751,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 99d673eb8ccd72f49998b467563ac5cb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -754,6 +769,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566196848}
   m_CullTransparentMesh: 1
+--- !u!114 &566196853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566196848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respuesta: 6
 --- !u!1 &568463329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagen: {fileID: 21300000, guid: fe829f42a70e46248b0609c1d1b10d0f, type: 3}
   respuesta: 1
 --- !u!1 &938664193
 GameObject:
@@ -2597,6 +2624,7 @@ GameObject:
   - component: {fileID: 1615172910}
   - component: {fileID: 1615172909}
   - component: {fileID: 1615172908}
+  - component: {fileID: 1615172911}
   m_Layer: 5
   m_Name: Pista_5
   m_TagString: Untagged
@@ -2718,6 +2746,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615172906}
   m_CullTransparentMesh: 1
+--- !u!114 &1615172911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615172906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respuesta: 5
 --- !u!1 &1656142551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,6 +2771,7 @@ GameObject:
   - component: {fileID: 1656142555}
   - component: {fileID: 1656142554}
   - component: {fileID: 1656142553}
+  - component: {fileID: 1656142556}
   m_Layer: 5
   m_Name: Pista_7
   m_TagString: Untagged
@@ -2833,8 +2875,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 17e9c53e35c42c843b37fb00119090b7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2851,6 +2893,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656142551}
   m_CullTransparentMesh: 1
+--- !u!114 &1656142556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656142551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respuesta: 7
 --- !u!1 &1674662419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,6 +2993,7 @@ GameObject:
   - component: {fileID: 1700215335}
   - component: {fileID: 1700215334}
   - component: {fileID: 1700215333}
+  - component: {fileID: 1700215336}
   m_Layer: 5
   m_Name: check
   m_TagString: Untagged
@@ -3007,7 +3063,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1700215334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1700215336}
+        m_TargetAssemblyTypeName: Confirmacion, Assembly-CSharp
+        m_MethodName: sala_de_datos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1700215334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3046,6 +3114,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700215331}
   m_CullTransparentMesh: 1
+--- !u!114 &1700215336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700215331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cd14ce218b0d4d8312fba1926faed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1796765420
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,6 +3330,7 @@ GameObject:
   - component: {fileID: 2044929262}
   - component: {fileID: 2044929261}
   - component: {fileID: 2044929260}
+  - component: {fileID: 2044929263}
   m_Layer: 5
   m_Name: Pista_2
   m_TagString: Untagged
@@ -3353,8 +3434,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fe829f42a70e46248b0609c1d1b10d0f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3371,6 +3452,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044929258}
   m_CullTransparentMesh: 1
+--- !u!114 &2044929263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044929258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respuesta: 2
 --- !u!1 &2077531479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,6 +3477,7 @@ GameObject:
   - component: {fileID: 2077531483}
   - component: {fileID: 2077531482}
   - component: {fileID: 2077531481}
+  - component: {fileID: 2077531484}
   m_Layer: 5
   m_Name: Pista_4
   m_TagString: Untagged
@@ -3504,6 +3599,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077531479}
   m_CullTransparentMesh: 1
+--- !u!114 &2077531484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077531479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respuesta: 4
 --- !u!1 &2138051181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,6 +3624,7 @@ GameObject:
   - component: {fileID: 2138051185}
   - component: {fileID: 2138051184}
   - component: {fileID: 2138051183}
+  - component: {fileID: 2138051186}
   m_Layer: 5
   m_Name: Pista_8
   m_TagString: Untagged
@@ -3619,8 +3728,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 17e9c53e35c42c843b37fb00119090b7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3637,6 +3746,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138051181}
   m_CullTransparentMesh: 1
+--- !u!114 &2138051186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138051181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405051eb10b2c494299d8cb795362727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respuesta: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

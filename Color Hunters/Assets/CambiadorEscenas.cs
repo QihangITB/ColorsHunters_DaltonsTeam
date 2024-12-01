@@ -5,7 +5,7 @@ using UnityEngine;
 public class CambiadorEscenas : MonoBehaviour
 {
     
-
+    //funcion para cambiar de escena
     public void GoToScene(int sceneName)
     {
         Debug.Log($"Está clicando el botón para cargar la escena: {sceneName}");
@@ -23,7 +23,7 @@ public class CambiadorEscenas : MonoBehaviour
         }
     }
 
-    // Función para llamar a la función Die() del Player
+    // Función para cerra el juego y lo pongo en el mismo script para ahorrar archivos
     public void SalirAplicacion()
     {
         // Mensaje de depuración en la consola

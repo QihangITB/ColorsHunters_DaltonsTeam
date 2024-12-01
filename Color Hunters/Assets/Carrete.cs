@@ -11,42 +11,57 @@ public class Carrete : MonoBehaviour
 {
     
     string[] imagene_1;
-
+    // en el awake carga el nombre de las imagenes, cambiar al gusto.
     private void Awake()
     {
         imagene_1 = new string[9] { "flores", "Castillo", "sumama", "alicante", "picante", "imagen_1_6", "imagen_1_7", "imagen_1_8", "imagen_1_9" };
-        //Debug.Log("Estado del carrete en el GameManager antes de llamar a rellenar(): " + string.Join(", ", GameManager.gameManager.carrete));
-        Rellenar();
+       // Debug.Log("Estado del carrete en el GameManager antes de llamar a rellenar(): " + string.Join(", ", GameManager.gameManager.carrete));
+        Rellenar(); // se llama a la funcion de rellenar
 
     }
 
     public void Rellenar()
     {
-        int nuevaImagen = GameManager.gameManager.GetImagen();
-        Debug.Log("el numero de carga del carrete es: " + GameManager.gameManager.carrete.Count);
+        int nuevaImagen = GameManager.gameManager.GetImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
+        
+        // Verificar si la imagen ya estï¿½ en las posiciones
+        int nuevaImagen = GameManager.gameManager.getImagen(); // carga el id de la imagen que estamos enviando mediante el game manager
+
+        // Verificar si la imagen ya estï¿½ en las posiciones
+        bool imagenExistente = GameManager.gameManager.posiciones.Contains(nuevaImagen);
+
+        if (imagenExistente)
+        {
+            Debug.Log("La imagen ya estï¿½ en las posiciones, no se agregarï¿½ al carrete.");
+        }
+        else
+        {
+            // Solo agregamos nuevas entradas si la imagen no estï¿½ en las posiciones
+            Debug.Log("Int nuevaImagen: " + nuevaImagen);//imprimimos para las pruebas
+            GameManager.gameManager.carrete.Add(seleccion(nuevaImagen));// de nuestra array seleccionamos el nombre que le corresponde mediante la funcion selection que etsa mas abajo
+            GameManager.gameManager.posiciones.Add(nuevaImagen);// aï¿½adimos al carrete
+
+            // Asegurar el tamaï¿½o mï¿½ximo del carrete
+            if (GameManager.gameManager.carrete.Count >= 8)
+            {
+                GameManager.gameManager.carrete.RemoveAt(0); // Eliminar el primero
+                GameManager.gameManager.posiciones.RemoveAt(0);  // Eliminar el primero
+            }
+        }
+
+        // Actualizar la UI (siempre se actualiza)
+        Debug.Log("El nï¿½mero de carga del carrete es: " + GameManager.gameManager.carrete.Count);
         foreach (var car in GameManager.gameManager.carrete)
         {
             Debug.Log("EN EL CARRETE HAY " + car);
         }
 
-        // Asegurar el tamaño máximo del carrete
-        if (GameManager.gameManager.carrete.Count >= 8)
-        {
-            GameManager.gameManager.carrete.RemoveAt(0); // Eliminar el primero
-            GameManager.gameManager.posiciones.RemoveAt(0);  // Eliminar el primero
-        }
-
-        // Agregar nuevas entradas
-        Debug.Log(" int nuevaimagen " + nuevaImagen);
-        GameManager.gameManager.carrete.Add(Seleccion(nuevaImagen));
-        //Debug.Log("Después de modificar: " + string.Join(", ", GameManager.gameManager.carrete));
-        GameManager.gameManager.posiciones.Add(nuevaImagen);
-
-        // Actualizar la UI
         for (int i = 0; i < 8; i++)
         {
             if (i >= transform.childCount) break;
 
+
+            // como este script esta en el abuelo del componente textmeshpro pues hacemos todo esto para pillar el componente
             Transform currentChild = transform.GetChild(i);
             Transform grandchild = currentChild.GetChild(0);
             TextMeshProUGUI tmpComponent = grandchild.GetComponent<TextMeshProUGUI>();
@@ -59,18 +74,18 @@ public class Carrete : MonoBehaviour
 
             if (i >= GameManager.gameManager.carrete.Count)
             {
-               // Debug.Log("se ha puesto empty");
-                tmpComponent.text = "Empty";
+                tmpComponent.text = "Empty";// rellenar campos vacios con empty que queda mejor
             }
             else
             {
-                tmpComponent.text = GameManager.gameManager.carrete[i];
+                tmpComponent.text = GameManager.gameManager.carrete[i].ToString(); // Asegï¿½rate de que sea un valor adecuado para mostrar
             }
         }
     }
 
     public string Seleccion(int numeroArray)
     {
+         // seleccionamos el string correspondiente y lo devolvemos
         return imagene_1[numeroArray];
     }
 }

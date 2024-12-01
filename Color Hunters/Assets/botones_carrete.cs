@@ -6,7 +6,7 @@ using UnityEngine;
 public class botones_carrete : MonoBehaviour
 {
     public Imagenes_guardadas guardadas;
-
+    // funcion que sirve para cambiar las imagenes cuando les das a un boton del carretee
     public void cambiarimagenBotones(int posicion)
     {
         Debug.Log(GameManager.gameManager.posiciones[posicion]);

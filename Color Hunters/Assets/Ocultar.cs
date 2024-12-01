@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ocultar : MonoBehaviour
 {
+    // script para ocultar cosas
     public GameObject pista;
 
     public void ocultar()
