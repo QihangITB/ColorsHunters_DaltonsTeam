@@ -71,13 +71,13 @@ public class Imagenes_guardadas : MonoBehaviour
         
     private void Awake()
     {
-        changeImage(GameManager.gameManager.getImagen()); // llama nada mas despertar la funcion para asociar imagen
+        changeImage(GameManager.gameManager.GetImagen()); // llama nada mas despertar la funcion para asociar imagen
     }
 
 
     public void changeImage(int numeroArray)
     {
-        GameManager.gameManager.setCuadricula(1); // se setea en 0% de contraste cada vez que el usuario abre imagen
+        GameManager.gameManager.SetCuadricula(1); // se setea en 0% de contraste cada vez que el usuario abre imagen
         Image image = Captura.GetComponent<Image>();
        
         Debug.Log(numeroArray);
@@ -132,191 +132,59 @@ public class Imagenes_guardadas : MonoBehaviour
     // funcion que usaran los botones de la camara para asociar si al pulsar estas dando la respuesta correcta, ajustar al gusto en el if pertinente
     public void enviar_respuesta(int quadricula)
     {
-        int numeroArray=GameManager.gameManager.getImagen();
+        int numeroArray=GameManager.gameManager.GetImagen();
         switch (numeroArray)
         {
             case 0:
-                if (quadricula == 5)  // este es el if que se tiene que ajustar a cada imagen para saber donde esta el objeto de la pista
-                {
-                    GameManager.gameManager.respuesta1 = true; // setea el boolean pertinente en true
-                    Debug.Log(GameManager.gameManager.respuesta1);
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5) // para que no siga aumentado y vaya buscando puntos de fuga que no existen
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1); // sistema automatizado para ir ajustandole el contraste
-                        GameManager.gameManager.cont1++; // contador para sacar conclusiones del jugador
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 5);
                 break;
             case 1:
-                if (quadricula == 5)
-                {
-                    GameManager.gameManager.respuesta2 = true;
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5)
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1);
-                        GameManager.gameManager.cont2++;
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 5);
                 break;
             case 2:
-                if (quadricula == 9)
-                {
-                    GameManager.gameManager.respuesta3 = true;
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5)
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1);
-                        GameManager.gameManager.cont3++;
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 9);
                 break;
             case 3:
-                if (quadricula == 2)
-                {
-                    GameManager.gameManager.respuesta4 = true;
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5)
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1);
-                        GameManager.gameManager.cont4++;
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 2);
                 break;
             case 4:
-                if (quadricula == 4)
-                {
-                    GameManager.gameManager.respuesta5 = true;
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5)
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1);
-                        GameManager.gameManager.cont5++;
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 4);
                 break;
             case 5:
-                if (quadricula == 5)
-                {
-                    GameManager.gameManager.respuesta6 = true;
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5)
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1);
-                        GameManager.gameManager.cont6++;
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 5);
                 break;
             case 6:
-                if (quadricula == 5)
-                {
-                    GameManager.gameManager.respuesta7 = true;
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5)
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1);
-                        GameManager.gameManager.cont7++;
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 5);
                 break;
             case 7:
-                if (quadricula == 4)
-                {
-                    GameManager.gameManager.respuesta8 = true;
-                }
-                else
-                {
-                    if (GameManager.gameManager.getImagen_imagen_quadricula() == 5)
-                    {
-                        Debug.Log("MAXIMO CONTRASTE ALCANZADO");
-                    }
-                    else
-                    {
-                        GameManager.gameManager.setCuadricula(GameManager.gameManager.getImagen_imagen_quadricula() + 1);
-                        GameManager.gameManager.cont8++;
-                        Debug.Log(GameManager.gameManager.getImagen_imagen_quadricula());
-                    }
-                }
+                ControladorRespuesta(quadricula, numeroArray, 4);
                 break;
         }
         settear_punto(numeroArray);
     }
 
-    private void ControladorRespuesta(int quadricula, int imageIndex)
+    private void ControladorRespuesta(int quadricula, int imageIndex, int respuestaCorrecta)
     {
-        if (quadricula == 5) // If the selected grid matches the expected answer
+        if (quadricula == respuestaCorrecta) // este es el if que se tiene que ajustar a cada imagen para saber donde esta el objeto de la pista
         {
-            // Dynamically set the appropriate response boolean using reflection
+            // Assigna dinamicamente el valor de la respuesta a true, ejemplo no dinamico: GameManager.gameManager.respuesta1 = true;
             typeof(GameManager).GetProperty($"respuesta{imageIndex + 1}").SetValue(GameManager.gameManager, true);
-
-            Debug.Log($"Response for image {imageIndex + 1}: " +
-                      typeof(GameManager).GetProperty($"respuesta{imageIndex + 1}").GetValue(GameManager.gameManager));
         }
         else
         {
-            int currentQuadricula = GameManager.gameManager.getImagen_imagen_quadricula();
+            int currentQuadricula = GameManager.gameManager.GetImagenCuadricula();
 
-            if (currentQuadricula == 5)
+            if (currentQuadricula == 5) // para que no siga aumentado y vaya buscando puntos de fuga que no existen
             {
                 Debug.Log("MAXIMO CONTRASTE ALCANZADO");
             }
             else
             {
-                GameManager.gameManager.setCuadricula(currentQuadricula + 1);
+                GameManager.gameManager.SetCuadricula(currentQuadricula + 1); // sistema automatizado para ir ajustandole el contraste
+
+                // Contador para sacar conclusiones del jugador, lo hace dinamicamente, ejemplo no dinamico: GameManager.gameManager.cont1++;
                 typeof(GameManager).GetProperty($"cont{imageIndex + 1}").SetValue(GameManager.gameManager,
                     (int)typeof(GameManager).GetProperty($"cont{imageIndex + 1}").GetValue(GameManager.gameManager) + 1);
-
-                Debug.Log($"Cuadricula for image {imageIndex + 1} incremented to {GameManager.gameManager.getImagen_imagen_quadricula()}");
             }
         }
     }
@@ -327,7 +195,7 @@ public class Imagenes_guardadas : MonoBehaviour
         switch (numeroArray)
         {
             case 0: // en base a la imagen que tiene puesta y el nivel de contraste pues pone la imagen pertienente
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_1_1;
@@ -347,7 +215,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 1:
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_2_1;
@@ -367,7 +235,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 2:
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_3_1;
@@ -387,7 +255,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 3:
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_4_1;
@@ -407,7 +275,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 4:
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_5_1;
@@ -427,7 +295,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 5:
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_6_1;
@@ -447,7 +315,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 6:
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_7_1;
@@ -467,7 +335,7 @@ public class Imagenes_guardadas : MonoBehaviour
                 }
                 break;
             case 7:
-                switch (GameManager.gameManager.getImagen_imagen_quadricula())
+                switch (GameManager.gameManager.GetImagenCuadricula())
                 {
                     case 1:
                         punto.sprite = imagen_8_1;

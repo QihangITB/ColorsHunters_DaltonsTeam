@@ -67,13 +67,13 @@ public class GameManager : MonoBehaviour
         imagen_completa = index;
     }
 
-    public void setCuadricula(int cuadricula)
+    public void SetCuadricula(int cuadricula)
     {
         imagen_contraste = cuadricula;
     }
 
-    public int getImagen() { return imagen_completa; } // para poder agarrar la imagen, se que no es necesario pero vengo de java y tengo la mania y lo he usado en mucho codigo asi que usemos esto xd
-    public int getImagen_imagen_quadricula() { return imagen_contraste; }
+    public int GetImagen() { return imagen_completa; } // para poder agarrar la imagen, se que no es necesario pero vengo de java y tengo la mania y lo he usado en mucho codigo asi que usemos esto xd
+    public int GetImagenCuadricula() { return imagen_contraste; }
 
 
     // Assigna los datos del cliente a la instancia del GameManager
