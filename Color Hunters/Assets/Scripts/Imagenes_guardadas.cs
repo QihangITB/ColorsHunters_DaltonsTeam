@@ -16,7 +16,6 @@ public class Imagenes_guardadas : MonoBehaviour
     public Sprite imagen_6;
     public Sprite imagen_7;
     public Sprite imagen_8;
-    public Sprite imagen_9;
 
     public Sprite imagen_1_1;
     public Sprite imagen_1_2;
@@ -71,6 +70,7 @@ public class Imagenes_guardadas : MonoBehaviour
         
     private void Awake()
     {
+        Debug.Log("IMAGEN " + GameManager.gameManager.GetImagen());
         changeImage(GameManager.gameManager.GetImagen()); // llama nada mas despertar la funcion para asociar imagen
     }
 
@@ -111,9 +111,6 @@ public class Imagenes_guardadas : MonoBehaviour
                         break;
                     case 7:
                         image.sprite = imagen_8;
-                        break;
-                    case 8:
-                        image.sprite = imagen_9;
                         break;
                 }
                 settear_punto(numeroArray); // una vez seteada la imagen setea su punto de fuga
