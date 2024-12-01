@@ -18,7 +18,7 @@ public class DBManager : MonoBehaviour
 
     public DBConnection database;
 
-    void Start()
+    void Awake()
     {
         database = new DBConnection();
         //database.ConnectionTest();
