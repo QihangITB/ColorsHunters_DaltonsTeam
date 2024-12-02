@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -113,23 +112,26 @@ public class GameManager : MonoBehaviour
 
     public string MostrarResultado()
     {
-        string resultado = "";
+        float nivel = CalcularResultados();
+        string resultado;
 
-        if (CalcularResultados() <= 10f)
+        if (nivel <= 10f)
         {
-            resultado = "Tiene una probabilidad nula de daltonismo";
+            resultado = "Tienes una probabilidad NULA de daltonismo";
         }
-        else if (CalcularResultados() <= 40f)
+        else if (nivel <= 40f)
         {
-            resultado = "Tiene una probabilidad baja de daltonismo";
+            resultado = "Tienes una probabilidad BAJA de daltonismo";
         }
-        else if (CalcularResultados() <= 80f)
+        else if (nivel <= 70f)
         {
-            resultado = "Tiene una probabilidad intermedia de daltonismo";
-        } else if (CalcularResultados() <= 100f)
-        {
-            resultado = "Tiene una probabilidad alta de daltonismo";
+            resultado = "Tienes una probabilidad INTERMEDIA de daltonismo";
         }
+        else // Esto incluye el rango de 70f a 100f
+        {
+            resultado = "Tienes una probabilidad ALTA de daltonismo";
+        }
+
         return resultado;
     }
 }

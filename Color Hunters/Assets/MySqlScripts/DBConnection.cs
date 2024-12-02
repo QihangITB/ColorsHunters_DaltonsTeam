@@ -17,7 +17,7 @@ public class DBConnection
     }
 
     /// <summary>
-    /// Lee el archivo JSON de configuracion y establece la cadena de conexión a la base de datos.
+    /// Lee el archivo JSON de configuracion y establece la cadena de conexiï¿½n a la base de datos.
     /// </summary>
     private void SetConnectionData()
     {
@@ -35,7 +35,7 @@ public class DBConnection
         }
         else
         {
-            Debug.LogError("No se encontró el archivo dbconfig.json " + configPath);
+            Debug.LogError("No se encontrï¿½ el archivo dbconfig.json " + configPath);
         }
     }
 
@@ -49,12 +49,12 @@ public class DBConnection
             using (var connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                Debug.Log("Conexión exitosa a la base de datos.");
+                Debug.Log("Conexiï¿½n exitosa a la base de datos.");
             }
         }
         catch (MySqlException ex)
         {
-            Debug.LogError($"Error de autenticación: {ex.Message}");
+            Debug.LogError($"Error de autenticaciï¿½n: {ex.Message}");
             if (ex.InnerException != null)
             {
                 Debug.LogError($"Detalles internos: {ex.InnerException.Message}");
@@ -69,10 +69,10 @@ public class DBConnection
     /// <param name="name">Nombre del cliente.</param>
     /// <param name="surnames">Apellidos del cliente.</param>
     /// <param name="age">Edad del cliente.</param>
-    /// <param name="phone">Teléfono del cliente.</param>
-    /// <param name="email">Correo electrónico del cliente.</param>
-    /// <param name="address">Dirección del cliente.</param>
-    /// <param name="doctor">ID del oftalmólogo asociado.</param>
+    /// <param name="phone">Telï¿½fono del cliente.</param>
+    /// <param name="email">Correo electrï¿½nico del cliente.</param>
+    /// <param name="address">Direcciï¿½n del cliente.</param>
+    /// <param name="doctor">ID del oftalmï¿½logo asociado.</param>
     public void InsertCustomer(string id, string name, string surnames, string age, string phone, string email, string address, int doctor)
     {
         string query = "INSERT INTO clientes (documento_identidad, nombre, apellidos, edad, telefono, correo, direccion, id_oftalmologo) " +
